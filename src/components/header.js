@@ -59,7 +59,7 @@ class Header extends Component {
         <div className="lower flex py-2 justify-between">
           <ul className="flex">
             <li className="navbar-item quicksand">
-              <Link to="/" className="navbar-link">
+              <Link to="/early-years" className="navbar-link">
                 Early Years
               </Link>
             </li>
@@ -114,7 +114,7 @@ class Header extends Component {
               </div>
             </li>
             <li className="navbar-item quicksand">
-              <Link to="/" className="navbar-link">
+              <Link to="/bio" className="navbar-link">
                 Danceland Bio
               </Link>
             </li>
