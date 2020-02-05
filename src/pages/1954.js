@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import PageTitle from "../components/pageTitle"
 import StickyYear from "../components/stickyYear"
+import Hr from "../components/styledHr"
 import { graphql } from "gatsby"
 import ModalImage from "react-modal-image"
 import Img from "gatsby-image"
@@ -53,13 +54,13 @@ const data1954 = ({ data }) => {
       <div className="year-container mx-24">
         {data.allAirtable.edges.map(({ node }) => {
           return (
-            <div key={node.id} className="flex flex-col justify-center p-4 m-4">
+            <div key={node.id} className="flex flex-col justify-center">
               <p className="self-center">
                 {node.data.fullDate}, {node.data.year} | {node.data.weekday}
               </p>
               <h2 className="self-center text-3xl">{node.data.artist}</h2>
               <p className="self-center">{node.data.price}</p>
-              <div className="image-container py-2">
+              <div className="image-container">
                 {node.data.img1 && node.data.img1.url !== 0 ? (
                   <div className="flex justify-center">
                     <img
@@ -88,7 +89,7 @@ const data1954 = ({ data }) => {
                   </div>
                 ) : null}
               </div>
-              {/* <hr /> */}
+              <Hr />
             </div>
           )
         })}

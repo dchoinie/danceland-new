@@ -38,9 +38,7 @@ p {
 .year-container {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  column-gap: 2rem;
   grid-template-rows: repeat(auto, 1fr);
-  row-gap: 2rem;
 }
 
 .image-container {
@@ -51,7 +49,7 @@ p {
   row-gap: 2rem;
 }
 
-hr.style-eight {
+.styled-hr {
   overflow: visible; /* For IE */
   border: none;
   border-top: medium double #333;
@@ -59,7 +57,7 @@ hr.style-eight {
   text-align: center;
   z-index: 1;
 }
-hr.style-eight:after {
+.styled-hr:after {
   content: "D";
   display: inline-block;
   position: relative;
