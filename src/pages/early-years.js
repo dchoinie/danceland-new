@@ -35,6 +35,9 @@ export const earlyYearsQuery = graphql`
             img6 {
               url
             }
+            img7 {
+              url
+            }
           }
         }
       }
@@ -103,6 +106,15 @@ export default ({ data }) => {
                   <div className="flex justify-center">
                     <img
                       src={node.data.img6[0].url}
+                      alt=""
+                      className="self-center"
+                    />
+                  </div>
+                ) : null}
+                {node.data.img7 && node.data.img7.url !== 0 ? (
+                  <div className="flex justify-center">
+                    <img
+                      src={node.data.img7[0].url}
                       alt=""
                       className="self-center"
                     />

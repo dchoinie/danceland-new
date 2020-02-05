@@ -129,7 +129,7 @@ class Header extends Component {
               </Link>
             </li>
             <li className="navbar-item quicksand">
-              <Link to="/" className="navbar-link">
+              <Link to="/danceland-bandstand" className="navbar-link">
                 Danceland Bandstand
               </Link>
             </li>
