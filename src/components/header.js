@@ -69,7 +69,7 @@ class Header extends Component {
                 <Link className="p-2 navbar-link" to="/1954">
                   1954
                 </Link>
-                <Link className="p-2 navbar-link" to="/">
+                <Link className="p-2 navbar-link" to="/1955">
                   1955
                 </Link>
                 <Link className="p-2 navbar-link" to="/">

@@ -40,11 +40,10 @@ module.exports = {
           {
             baseId: process.env.AIRTABLE_BASE_ID,
             tableName: `data1954`,
-            mapping: {
-              img1: `fileNode`,
-              img2: `fileNode`,
-              img3: `fileNode`,
-            },
+          },
+          {
+            baseId: process.env.AIRTABLE_BASE_ID,
+            tableName: `data1955`,
           },
         ],
       },
