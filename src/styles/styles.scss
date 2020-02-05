@@ -70,6 +70,12 @@ hr.style-eight:after {
   z-index: 40;
 }
 
+.sticky-year {
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+}
+
 #record-spinner-container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);

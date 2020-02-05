@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import PageTitle from "../components/pageTitle"
+import StickyYear from "../components/stickyYear"
 import { graphql } from "gatsby"
 import ModalImage from "react-modal-image"
 import Img from "gatsby-image"
@@ -40,6 +41,7 @@ const data1954 = ({ data }) => {
   return (
     <Layout>
       <PageTitle title="1954" />
+      <StickyYear year="1954" />
       <article className="message is-dark container">
         <div className="message-body">
           National acts that played at Danceland in 1954 include - Wayne King

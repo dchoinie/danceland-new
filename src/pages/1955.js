@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import PageTitle from "../components/pageTitle"
+import StickyYear from "../components/stickyYear"
 import { graphql } from "gatsby"
 
 export const query1954 = graphql`
@@ -56,6 +57,7 @@ const data1955 = ({ data }) => {
   return (
     <Layout>
       <PageTitle title="1955" />
+      <StickyYear year="1955" />
       <article className="message is-dark container">
         <div className="message-body">
           1955 was the year live rock and roll came to Cedar Rapids. The date
