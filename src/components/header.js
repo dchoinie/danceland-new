@@ -124,7 +124,7 @@ class Header extends Component {
               </Link>
             </li>
             <li className="navbar-item quicksand">
-              <Link to="/" className="navbar-link">
+              <Link to="/posters" className="navbar-link">
                 Posters
               </Link>
             </li>

@@ -76,6 +76,14 @@ hr.style-eight:after {
   right: 2%;
 }
 
+.posters-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 2rem;
+  grid-template-rows: repeat(auto, 1fr);
+  row-gap: 2rem;
+}
+
 #record-spinner-container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
