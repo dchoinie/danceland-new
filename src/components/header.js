@@ -39,7 +39,7 @@ class Header extends Component {
           <div className="self-center">
             <ul className="flex">
               <li className="mx-2 p-4">
-                <Link to="/">Early Years</Link>
+                <Link to="/early-years">Early Years</Link>
               </li>
               <li className="mx-2 p-4">
                 {console.log(listOpen)}
