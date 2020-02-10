@@ -19,7 +19,13 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-sass`,
+    `gatsby-plugin-postcss`,
+    {
+      resolve: `gatsby-plugin-favicon`,
+      options: {
+        logo: "./src/images/Front_Wider.jpg",
+      },
+    },
     {
       resolve: "gatsby-plugin-web-font-loader",
       options: {

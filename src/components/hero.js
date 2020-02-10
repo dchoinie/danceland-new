@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
+import { useSpring, animated } from "react-spring"
 
 export default () => {
   const data = useStaticQuery(graphql`
@@ -22,6 +23,7 @@ export default () => {
       }
     }
   `)
+
   return (
     <div className="flex justify-center my-24">
       <div

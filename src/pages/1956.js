@@ -1,22 +1,25 @@
 import React from "react"
-import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import PageTitle from "../components/pageTitle"
-import Hr from "../components/styledHr"
 import StickyYear from "../components/stickyYear"
+import Hr from "../components/styledHr"
+import { graphql } from "gatsby"
 
-export const earlyYearsQuery = graphql`
+export const query1956 = graphql`
   {
     allAirtable(
-      filter: { table: { eq: "earlyYears" } }
+      filter: { table: { eq: "data1955" } }
       sort: { fields: data___orderId }
     ) {
       edges {
         node {
           id
           data {
-            fullDate
             artist
+            fullDate
+            price
+            weekday
+            year
             img1 {
               url
             }
@@ -38,6 +41,12 @@ export const earlyYearsQuery = graphql`
             img7 {
               url
             }
+            img8 {
+              url
+            }
+            img9 {
+              url
+            }
           }
         }
       }
@@ -45,26 +54,34 @@ export const earlyYearsQuery = graphql`
   }
 `
 
-export default ({ data }) => {
+const data1956 = ({ data }) => {
   return (
     <Layout>
-      <PageTitle title="Early Years" />
-      <StickyYear year="Early Years (1926 - 1953)" />
+      <PageTitle title="1956" />
+      <StickyYear year="1956" />
+      <article className="message is-dark container">
+        <div className="message-body">
+          National acts that played at Danceland in 1956 include: Boyd Bennett
+          &amp; His Rockets, Wanda Jackson, Faron Young, Webb Pierce, Marvin
+          Rainwater, Porter Wagoner, Hank Thompson &amp; His Bravos Valley Boys,
+          Red Sovine, Bill Wimberly &amp; His Country Rhythm Boys, Bobby Lord,
+          Jimmy &amp; Johnny, Rusty Draper, Dick Mango &amp; His Orchestra, Ray
+          Pearl &amp; His Musical Gems, Six Fat Dutchmen, “Whoopee” John
+          Wilfahrt &amp; His Orchestra
+        </div>
+      </article>
       <div className="year-container mx-24">
         {data.allAirtable.edges.map(({ node }) => {
           return (
             <div key={node.id} className="flex flex-col justify-center">
-              <p className="self-center">{node.data.fullDate}</p>
+              <p className="self-center">
+                {node.data.fullDate}, {node.data.year} | {node.data.weekday}
+              </p>
               <h2 className="self-center text-3xl">{node.data.artist}</h2>
-              <div
-                className="image-container"
-                style={{ border: "1px solid red" }}
-              >
+              <p className="self-center">{node.data.price}</p>
+              <div className="image-container">
                 {node.data.img1 && node.data.img1.url !== 0 ? (
-                  <div
-                    className="flex justify-center"
-                    style={{ border: "2px solid blue" }}
-                  >
+                  <div className="flex justify-center">
                     <img
                       src={node.data.img1[0].url}
                       alt=""
@@ -73,10 +90,7 @@ export default ({ data }) => {
                   </div>
                 ) : null}
                 {node.data.img2 && node.data.img2.url !== 0 ? (
-                  <div
-                    className="flex justify-center"
-                    style={{ border: "2px solid blue" }}
-                  >
+                  <div className="flex justify-center">
                     <img
                       src={node.data.img2[0].url}
                       alt=""
@@ -85,10 +99,7 @@ export default ({ data }) => {
                   </div>
                 ) : null}
                 {node.data.img3 && node.data.img3.url !== 0 ? (
-                  <div
-                    className="flex justify-center"
-                    style={{ border: "2px solid blue" }}
-                  >
+                  <div className="flex justify-center">
                     <img
                       src={node.data.img3[0].url}
                       alt=""
@@ -132,6 +143,24 @@ export default ({ data }) => {
                     />
                   </div>
                 ) : null}
+                {node.data.img8 && node.data.img8.url !== 0 ? (
+                  <div className="flex justify-center">
+                    <img
+                      src={node.data.img8[0].url}
+                      alt=""
+                      className="self-center"
+                    />
+                  </div>
+                ) : null}
+                {node.data.img9 && node.data.img9.url !== 0 ? (
+                  <div className="flex justify-center">
+                    <img
+                      src={node.data.img9[0].url}
+                      alt=""
+                      className="self-center"
+                    />
+                  </div>
+                ) : null}
               </div>
               <Hr />
             </div>
@@ -141,3 +170,5 @@ export default ({ data }) => {
     </Layout>
   )
 }
+
+export default data1956

@@ -1,142 +1,127 @@
 import React, { Component } from "react"
 import { Link } from "gatsby"
-import { FaSearch } from "react-icons/fa"
+import { FaChevronUp, FaChevronDown } from "react-icons/fa"
 
 class Header extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      isToggleOn: false,
+      listOpen: false,
     }
-    this.handleClick = this.handleClick.bind(this)
   }
 
-  handleClick() {
-    this.setState(state => ({
-      isToggleOn: !state.isToggleOn,
+  handleClickOutside() {
+    this.setState({
+      listOpen: false,
+    })
+  }
+
+  toggleList() {
+    this.setState(prevState => ({
+      listOpen: !prevState.listOpen,
     }))
-    const burger = document.querySelector(".navbar-burger")
-    const menu = document.querySelector(".navbar-menu")
-    burger.classList.toggle("is-active")
-    menu.classList.toggle("is-active")
   }
 
   render() {
+    const { list } = this.props
+    const { listOpen } = this.state
     return (
-      <nav
-        className="navbar mx-56 flex flex-col"
-        role="navigation"
-        aria-label="main navigation"
-      >
-        <div className="upper flex justify-between py-2">
-          <div className="navbar-brand">
-            <Link to="/">
-              <h1
-                className="has-text-black text-3xl font-bold py-2"
-                style={{
-                  fontVariant: "small-caps",
-                  transform: "rotate(-5deg)",
-                }}
-              >
-                Danceland
-              </h1>
-            </Link>
-
-            <a
-              href="#"
-              role="button"
-              className="navbar-burger burger"
-              aria-label="menu"
-              aria-expanded="false"
-              data-target="mainNav"
+      <>
+        <nav className="flex flex-col">
+          <Link to="/" className="self-center py-4">
+            <h1
+              className="text-4xl font-bold"
+              style={{ transform: "rotate(-5deg)", fontVariant: "small-caps" }}
             >
-              <span aria-hidden="true"></span>
-              <span aria-hidden="true"></span>
-              <span aria-hidden="true"></span>
-            </a>
+              Danceland
+            </h1>
+          </Link>
+          <div className="self-center">
+            <ul className="flex">
+              <li className="mx-2 p-4">
+                <Link to="/">Early Years</Link>
+              </li>
+              <li className="mx-2 p-4">
+                {console.log(listOpen)}
+                <div
+                  className="flex cursor-pointer"
+                  onClick={() => this.toggleList()}
+                >
+                  Search By Year
+                  {listOpen ? (
+                    <FaChevronUp className="self-center ml-1" />
+                  ) : (
+                    <FaChevronDown className="self-center ml-1" />
+                  )}
+                </div>
+                <div className="">
+                  {listOpen && (
+                    <ul className="flex flex-col items-center">
+                      <li className="my-1">
+                        <Link to="/1954">1954</Link>
+                      </li>
+                      <li className="my-1">
+                        <Link to="/1955">1955</Link>
+                      </li>
+                      <li className="my-1">
+                        <Link to="/1956">1956</Link>
+                      </li>
+                      <li className="my-1">
+                        <Link to="/1954">1957</Link>
+                      </li>
+                      <li className="my-1">
+                        <Link to="/1954">1958</Link>
+                      </li>
+                      <li className="my-1">
+                        <Link to="/1954">1959</Link>
+                      </li>
+                      <li className="my-1">
+                        <Link to="/1954">1960</Link>
+                      </li>
+                      <li className="my-1">
+                        <Link to="/1954">1961</Link>
+                      </li>
+                      <li className="my-1">
+                        <Link to="/1954">1962</Link>
+                      </li>
+                      <li className="my-1">
+                        <Link to="/1954">1963</Link>
+                      </li>
+                      <li className="my-1">
+                        <Link to="/1954">1964</Link>
+                      </li>
+                      <li className="my-1">
+                        <Link to="/1954">1965</Link>
+                      </li>
+                      <li className="my-1">
+                        <Link to="/1954">1966</Link>
+                      </li>
+                      <li className="my-1">
+                        <Link to="/1954">1967</Link>
+                      </li>
+                      <li className="my-1">
+                        <Link to="/1954">1968</Link>
+                      </li>
+                    </ul>
+                  )}
+                </div>
+              </li>
+              <li className="mx-2 p-4">
+                <Link to="/">Danceland Bio</Link>
+              </li>
+              <li className="mx-2 p-4">
+                <Link to="/">Darlowe Oleson</Link>
+              </li>
+              <li className="mx-2 p-4">
+                <Link to="/">Posters</Link>
+              </li>
+              <li className="mx-2 p-4">
+                <Link to="/">Danceland Bandstand</Link>
+              </li>
+            </ul>
           </div>
-        </div>
-        <div className="lower flex py-2 justify-between">
-          <ul className="flex">
-            <li className="navbar-item quicksand">
-              <Link to="/early-years" className="navbar-link">
-                Early Years
-              </Link>
-            </li>
-            <li className="navbar-item has-dropdown is-hoverable">
-              <a className="navbar-link">Search By Year</a>
-              <div className="navbar-dropdown">
-                <Link className="p-2 navbar-link" to="/1954">
-                  1954
-                </Link>
-                <Link className="p-2 navbar-link" to="/1955">
-                  1955
-                </Link>
-                <Link className="p-2 navbar-link" to="/">
-                  1956
-                </Link>
-                <Link className="p-2 navbar-link" to="/">
-                  1957
-                </Link>
-                <Link className="p-2 navbar-link" to="/">
-                  1958
-                </Link>
-                <Link className="p-2 navbar-link" to="/">
-                  1959
-                </Link>
-                <Link className="p-2 navbar-link" to="/">
-                  1960
-                </Link>
-                <Link className="p-2 navbar-link" to="/">
-                  1961
-                </Link>
-                <Link className="p-2 navbar-link" to="/">
-                  1962
-                </Link>
-                <Link className="p-2 navbar-link" to="/">
-                  1963
-                </Link>
-                <Link className="p-2 navbar-link" to="/">
-                  1964
-                </Link>
-                <Link className="p-2 navbar-link" to="/">
-                  1965
-                </Link>
-                <Link className="p-2 navbar-link" to="/">
-                  1966
-                </Link>
-                <Link className="p-2 navbar-link" to="/">
-                  1967
-                </Link>
-                <Link className="p-2 navbar-link" to="/">
-                  1968
-                </Link>
-              </div>
-            </li>
-            <li className="navbar-item quicksand">
-              <Link to="/bio" className="navbar-link">
-                Danceland Bio
-              </Link>
-            </li>
-            <li className="navbar-item quicksand">
-              <Link to="/" className="navbar-link">
-                Darlowe Oleson
-              </Link>
-            </li>
-            <li className="navbar-item quicksand">
-              <Link to="/posters" className="navbar-link">
-                Posters
-              </Link>
-            </li>
-            <li className="navbar-item quicksand">
-              <Link to="/danceland-bandstand" className="navbar-link">
-                Danceland Bandstand
-              </Link>
-            </li>
-          </ul>
-          <FaSearch />
-        </div>
-      </nav>
+        </nav>
+      </>
     )
   }
 }

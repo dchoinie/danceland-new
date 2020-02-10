@@ -5,7 +5,7 @@ import StickyYear from "../components/stickyYear"
 import Hr from "../components/styledHr"
 import { graphql } from "gatsby"
 
-export const query1954 = graphql`
+export const query1955 = graphql`
   {
     allAirtable(
       filter: { table: { eq: "data1955" } }
