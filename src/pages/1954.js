@@ -60,14 +60,15 @@ const data1954 = ({ data }) => {
     <Layout>
       <PageTitle title="1954" />
       <StickyYear year="1954" />
-      <article className="message is-dark container">
-        <div className="message-body">
+      <div className="flex justify-center max-w-4xl mx-auto pb-6">
+        <h5>
           National acts that played at Danceland in 1954 include - Wayne King
           &amp; His Orchestra, “Whoopee” John Wilfahrt &amp; His Orchestra, WNAX
           Bohemian Band, Fezz Fritsche &amp; His Goosetown Band, Six Fat
           Dutchmen, Frank Yankovic &amp; His Yanks
-        </div>
-      </article>
+        </h5>
+      </div>
+
       <div className="year-container mx-24">
         {data.allAirtable.edges.map(({ node }) => {
           return (
