@@ -42,7 +42,6 @@ class Header extends Component {
                 <Link to="/early-years">Early Years</Link>
               </li>
               <li className="mx-2 p-4">
-                {console.log(listOpen)}
                 <div
                   className="flex cursor-pointer"
                   onClick={() => this.toggleList()}

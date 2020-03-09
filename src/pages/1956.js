@@ -59,7 +59,7 @@ const data1956 = ({ data }) => {
     <Layout>
       <PageTitle title="1956" />
       <StickyYear year="1956" />
-      <article className="message is-dark container">
+      <article className="message is-dark container mx-auto">
         <div className="message-body">
           National acts that played at Danceland in 1956 include: Boyd Bennett
           &amp; His Rockets, Wanda Jackson, Faron Young, Webb Pierce, Marvin
@@ -85,7 +85,7 @@ const data1956 = ({ data }) => {
                     <img
                       src={node.data.img1[0].url}
                       alt=""
-                      className="self-center"
+                      className="self-center w-40"
                     />
                   </div>
                 ) : null}
@@ -94,7 +94,7 @@ const data1956 = ({ data }) => {
                     <img
                       src={node.data.img2[0].url}
                       alt=""
-                      className="self-center"
+                      className="self-center w-40"
                     />
                   </div>
                 ) : null}
@@ -103,7 +103,7 @@ const data1956 = ({ data }) => {
                     <img
                       src={node.data.img3[0].url}
                       alt=""
-                      className="self-center"
+                      className="self-center w-40"
                     />
                   </div>
                 ) : null}
@@ -112,7 +112,7 @@ const data1956 = ({ data }) => {
                     <img
                       src={node.data.img4[0].url}
                       alt=""
-                      className="self-center"
+                      className="self-center w-40"
                     />
                   </div>
                 ) : null}
@@ -121,7 +121,7 @@ const data1956 = ({ data }) => {
                     <img
                       src={node.data.img5[0].url}
                       alt=""
-                      className="self-center"
+                      className="self-center w-40"
                     />
                   </div>
                 ) : null}
@@ -130,7 +130,7 @@ const data1956 = ({ data }) => {
                     <img
                       src={node.data.img6[0].url}
                       alt=""
-                      className="self-center"
+                      className="self-center w-40"
                     />
                   </div>
                 ) : null}
@@ -139,7 +139,7 @@ const data1956 = ({ data }) => {
                     <img
                       src={node.data.img7[0].url}
                       alt=""
-                      className="self-center"
+                      className="self-center w-40"
                     />
                   </div>
                 ) : null}
@@ -148,7 +148,7 @@ const data1956 = ({ data }) => {
                     <img
                       src={node.data.img8[0].url}
                       alt=""
-                      className="self-center"
+                      className="self-center w-40"
                     />
                   </div>
                 ) : null}
@@ -157,7 +157,7 @@ const data1956 = ({ data }) => {
                     <img
                       src={node.data.img9[0].url}
                       alt=""
-                      className="self-center"
+                      className="self-center w-40"
                     />
                   </div>
                 ) : null}

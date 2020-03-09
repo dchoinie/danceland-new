@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Component } from "react"
 import Layout from "../components/layout"
 import PageTitle from "../components/pageTitle"
 import StickyYear from "../components/stickyYear"
@@ -6,6 +6,18 @@ import Hr from "../components/styledHr"
 import { graphql } from "gatsby"
 import ModalImage from "react-modal-image"
 import Img from "gatsby-image"
+
+// export class SearchInput extends Component {
+//   constructor(props) {
+//     super(props)
+//     this.state = {
+//       data: query1954,
+//     }
+//   }
+//   render() {
+//     return <div>{console.log(this.state)}</div>
+//   }
+// }
 
 export const query1954 = graphql`
   {
@@ -18,19 +30,24 @@ export const query1954 = graphql`
           id
           data {
             artist
+            comment1
+            comment2
             fullDate
-            price
-            weekday
-            year
             img1 {
               url
             }
+            img1caption
             img2 {
               url
             }
+            img2caption
             img3 {
               url
             }
+            price
+            weekday
+            year
+            spotify1
           }
         }
       }
@@ -60,23 +77,26 @@ const data1954 = ({ data }) => {
               </p>
               <h2 className="self-center text-3xl">{node.data.artist}</h2>
               <p className="self-center">{node.data.price}</p>
+              <p className="self-center">{node.data.comment1}</p>
               <div className="image-container">
                 {node.data.img1 && node.data.img1.url !== 0 ? (
                   <div className="flex justify-center">
-                    <img
-                      src={node.data.img1[0].url}
-                      alt=""
-                      className="self-center"
-                    />
+                    <figure className="self-center">
+                      <img src={node.data.img1[0].url} alt="" className="" />
+                      <figcaption className="text-center">
+                        {node.data.img1caption}
+                      </figcaption>
+                    </figure>
                   </div>
                 ) : null}
                 {node.data.img2 && node.data.img2.url !== 0 ? (
                   <div className="flex justify-center">
-                    <img
-                      src={node.data.img2[0].url}
-                      alt=""
-                      className="self-center"
-                    />
+                    <figure className="self-center">
+                      <img src={node.data.img2[0].url} alt="" className="" />
+                      <figcaption className="text-center">
+                        {node.data.img2caption}
+                      </figcaption>
+                    </figure>
                   </div>
                 ) : null}
                 {node.data.img3 && node.data.img3.url !== 0 ? (
@@ -89,6 +109,18 @@ const data1954 = ({ data }) => {
                   </div>
                 ) : null}
               </div>
+              <p className="self-center">{node.data.comment2}</p>
+              {node.data.spotify1 && node.data.spotify1 !== 0 ? (
+                <div className="flex justify-center py-2">
+                  <iframe
+                    src={node.data.spotify1}
+                    frameborder="0"
+                    width="300"
+                    height="80"
+                    className="rounded"
+                  ></iframe>
+                </div>
+              ) : null}
               <Hr />
             </div>
           )
