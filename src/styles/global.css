@@ -2,6 +2,12 @@
 
 @tailwind components;
 
+.timeline-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  grid-template-rows: repeat(auto, 1fr);
+}
+
 nav > * {
   font-family: "Quicksand", sans-serif;
 }

@@ -6,6 +6,12 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+.timeline-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  // grid-template-rows: repeat(auto, 1fr);
+}
+
 h1,
 h2,
 h3,
