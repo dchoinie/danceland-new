@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 export const query1954Data = graphql`
   {
     january: allAirtable(
-      filter: { table: { eq: "data1954" }, data: { Month: { eq: "January" } } }
+      filter: { table: { eq: "data1954" }, data: { month: { eq: "January" } } }
       sort: { fields: data___orderId }
     ) {
       edges {
