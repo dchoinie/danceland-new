@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import MonthHeader from "../components/monthHeader"
+import YearHeader from "../components/yearHeader"
 import { graphql } from "gatsby"
 
 export const query1965 = graphql`
@@ -105,17 +106,9 @@ const data1965 = ({ data }) => {
   return (
     <Layout>
       <div className="bg-white max-w-screen-xl mx-auto">
-        <div className="flex my-6">
-          <div className="flex w-1/2">
-            <img
-              src="https://via.placeholder.com/500x400?text=Year+Arrow+Image"
-              alt=""
-              className="rounded"
-            />
-          </div>
-          <div className="flex w-1/2">
-            <p className="self-center">
-              National acts that played at Danceland in 1965 include - The
+        <YearHeader
+          img="https://via.placeholder.com/1280x920"
+          summary="National acts that played at Danceland in 1965 include - The
               Yardbirds, The Turtles, Beau Brummels, Gary Lewis &amp; The
               Playboys, Chuck Berry, The Everly Brothers, Brenda Lee, The Gants,
               Billy Joe Royal, The Kingsmen, Sam The Sham &amp; The Pharaohs,
@@ -128,10 +121,8 @@ const data1965 = ({ data }) => {
               Twitty, The Gestures, Cannibal &amp; The Headhunters, The
               Premiers, Tiny Hill, Myron Lee &amp; The Caddies, Lonnie Mack, The
               Astronauts, Tony Clarke, The Trashmen, Jimmy Velvet, The
-              Tremolons, Big Tiny Little
-            </p>
-          </div>
-        </div>
+              Tremolons, Big Tiny Little"
+        />
         <MonthHeader month="January" year="1965" />
         <div>
           {data.january.edges.map(({ node }) => {
@@ -280,7 +271,7 @@ const data1965 = ({ data }) => {
               <div key={node.id} className="timeline-grid">
                 <div
                   className="flex justify-center py-2"
-                  //   style={{ border: "1px solid red" }}
+                  // style={{ border: "1px solid red" }}
                 >
                   {node.data.orderId % 2 == 0 ? null : (
                     <div className="flex flex-col w-full">
@@ -424,7 +415,10 @@ const data1965 = ({ data }) => {
                   //   style={{ border: "1px solid red" }}
                 >
                   {node.data.orderId % 2 == 0 ? null : (
-                    <div className="flex flex-col w-full">
+                    <div
+                      className="flex flex-col w-full"
+                      style={{ border: "1px solid red" }}
+                    >
                       <div className="flex flex-col items-center">
                         <p className="text-xl mr-1 text-gray-800 text-center uppercase font-bold">
                           {node.data.artist}
@@ -438,7 +432,10 @@ const data1965 = ({ data }) => {
                         {node.data.price}
                       </p>
                       <p>{node.data.comment1}</p>
-                      <div className="flex p-2">
+                      <div
+                        className="flex flex-col p-2"
+                        style={{ border: "1px solid blue" }}
+                      >
                         {node.data.img1 && node.data.img1.url !== 0 ? (
                           <div className="flex justify-center">
                             <figure className="self-center">
@@ -508,10 +505,19 @@ const data1965 = ({ data }) => {
                         <p className="text-center text-gray-700">
                           {node.data.price}
                         </p>
-                        <div className="flex p-2">
+                        <div
+                          className="flex flex-col p-2 items-center"
+                          style={{ border: "1px solid green" }}
+                        >
                           {node.data.img1 && node.data.img1.url !== 0 ? (
-                            <div className="flex justify-center">
-                              <figure className="self-center">
+                            <div
+                              className="flex justify-center"
+                              style={{ border: "1px solid red" }}
+                            >
+                              <figure
+                                className="self-center"
+                                style={{ border: "1px solid red" }}
+                              >
                                 <img
                                   src={node.data.img1[0].url}
                                   alt=""

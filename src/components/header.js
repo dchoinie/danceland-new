@@ -1,128 +1,99 @@
 import React, { Component } from "react"
-import { Link } from "gatsby"
-import { FaChevronUp, FaChevronDown } from "react-icons/fa"
+import { Link, useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
+import SearchDropdown from "../components/searchDropdown"
+import { FaBars } from "react-icons/fa"
 
-class Header extends Component {
+class Hamburger extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      listOpen: false,
+      navOpen: false,
     }
   }
 
   handleClickOutside() {
     this.setState({
-      listOpen: false,
+      navOpen: false,
     })
   }
 
-  toggleList() {
+  toggleNav() {
     this.setState(prevState => ({
-      listOpen: !prevState.listOpen,
+      navOpen: !prevState.navOpen,
     }))
   }
 
   render() {
-    const { list } = this.props
-    const { listOpen } = this.state
+    const { navOpen } = this.state
     return (
-      <>
-        <nav className="flex flex-col">
-          <Link to="/" className="self-center py-4">
-            <h1
-              className="text-4xl font-bold"
-              style={{ transform: "rotate(-5deg)", fontVariant: "small-caps" }}
-            >
-              Danceland
-            </h1>
-          </Link>
-          <div className="self-center">
-            <ul className="flex">
-              <li className="mx-2 p-4">
-                <Link to="/early-years">Early Years</Link>
-              </li>
-              <li className="mx-2 p-4">
-                <div
-                  className="flex cursor-pointer"
-                  onClick={() => this.toggleList()}
-                >
-                  Search By Year
-                  {listOpen ? (
-                    <FaChevronUp className="self-center ml-1" />
-                  ) : (
-                    <FaChevronDown className="self-center ml-1" />
-                  )}
-                </div>
-                <div className="">
-                  {listOpen && (
-                    <ul className="flex flex-col items-center">
-                      <li className="my-1">
-                        <Link to="/1954">1954</Link>
-                      </li>
-                      <li className="my-1">
-                        <Link to="/1955">1955</Link>
-                      </li>
-                      <li className="my-1">
-                        <Link to="/1956">1956</Link>
-                      </li>
-                      <li className="my-1">
-                        <Link to="/1954">1957</Link>
-                      </li>
-                      <li className="my-1">
-                        <Link to="/1954">1958</Link>
-                      </li>
-                      <li className="my-1">
-                        <Link to="/1954">1959</Link>
-                      </li>
-                      <li className="my-1">
-                        <Link to="/1954">1960</Link>
-                      </li>
-                      <li className="my-1">
-                        <Link to="/1954">1961</Link>
-                      </li>
-                      <li className="my-1">
-                        <Link to="/1954">1962</Link>
-                      </li>
-                      <li className="my-1">
-                        <Link to="/1954">1963</Link>
-                      </li>
-                      <li className="my-1">
-                        <Link to="/1954">1964</Link>
-                      </li>
-                      <li className="my-1">
-                        <Link to="/1965">1965</Link>
-                      </li>
-                      <li className="my-1">
-                        <Link to="/1954">1966</Link>
-                      </li>
-                      <li className="my-1">
-                        <Link to="/1954">1967</Link>
-                      </li>
-                      <li className="my-1">
-                        <Link to="/1954">1968</Link>
-                      </li>
-                    </ul>
-                  )}
-                </div>
-              </li>
-              <li className="mx-2 p-4">
-                <Link to="/">Danceland Bio</Link>
-              </li>
-              <li className="mx-2 p-4">
-                <Link to="/">Darlowe Oleson</Link>
-              </li>
-              <li className="mx-2 p-4">
-                <Link to="/">Posters</Link>
-              </li>
-              <li className="mx-2 p-4">
-                <Link to="/">Danceland Bandstand</Link>
-              </li>
+      <div className="relative" onClick={() => this.toggleNav()}>
+        <FaBars />
+        <div className="absolute whitespace-no-wrap" style={{ right: "0" }}>
+          {navOpen && (
+            <ul className="text-right">
+              <li>Home</li>
+              <li>Early Years</li>
+              <li>Search By Year</li>
+              <li>Danceland Bio</li>
+              <li>Posters</li>
+              <li>Danceland Bandstand</li>
             </ul>
-          </div>
-        </nav>
-      </>
+          )}
+        </div>
+      </div>
     )
   }
+}
+
+const Header = () => {
+  const data = useStaticQuery(graphql`
+    {
+      logo: file(relativePath: { eq: "header_logo.jpg" }) {
+        childImageSharp {
+          fluid {
+            src
+            srcSet
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+  return (
+    <nav className="flex justify-between lg:flex-col px-12">
+      <div className="w-48 lg:w-full lg:flex lg:justify-center">
+        <Link to="/" className="w-1/4">
+          <Img fluid={data.logo.childImageSharp.fluid} />
+        </Link>
+      </div>
+      <div className="hidden lg:flex lg:justify-center lg:py-4">
+        <ul className="flex border-b border-black pb-2">
+          <li className="mr-4 text-3xl uppercase p-2 hover:bg-black hover:text-white rounded">
+            <Link to="/">Home</Link>
+          </li>
+          <li className="mx-4 text-3xl uppercase p-2 hover:bg-black hover:text-white rounded">
+            <Link to="/">Early Years</Link>
+          </li>
+          <li className="mx-4 text-3xl uppercase p-2 hover:bg-black hover:text-white rounded">
+            <SearchDropdown />
+          </li>
+          <li className="mx-4 text-3xl uppercase p-2 hover:bg-black hover:text-white rounded">
+            <Link to="/">Danceland Bio</Link>
+          </li>
+          <li className="mx-4 text-3xl uppercase p-2 hover:bg-black hover:text-white rounded">
+            <Link to="/">Posters</Link>
+          </li>
+          <li className="ml-4 text-3xl uppercase p-2 hover:bg-black hover:text-white rounded">
+            <Link to="/">Danceland Bandstand</Link>
+          </li>
+        </ul>
+      </div>
+      <div className="flex self-center lg:hidden">
+        <Hamburger />
+      </div>
+    </nav>
+  )
 }
 
 export default Header

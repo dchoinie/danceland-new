@@ -30,17 +30,24 @@ module.exports = {
     {
       resolve: `gatsby-plugin-favicon`,
       options: {
-        logo: "./src/images/Front_Wider.jpg",
+        logo: "./src/images/header_logo.jpg",
       },
     },
     {
-      resolve: "gatsby-plugin-web-font-loader",
+      resolve: "gatsby-source-filesystem",
       options: {
-        google: {
-          families: ["Open Sans", "Hepta Slab", "Noto Serif", "Quicksand"],
-        },
+        name: "fonts",
+        path: `${__dirname}/src/fonts/`,
       },
     },
+    // {
+    //   resolve: "gatsby-plugin-web-font-loader",
+    //   options: {
+    //     google: {
+    //       families: ["Vast Shadow", "Open Sans"],
+    //     },
+    //   },
+    // },
     {
       resolve: `gatsby-source-airtable`,
       options: {
@@ -60,7 +67,55 @@ module.exports = {
           },
           {
             baseId: process.env.AIRTABLE_BASE_ID,
+            tableName: `data1956`,
+          },
+          {
+            baseId: process.env.AIRTABLE_BASE_ID,
+            tableName: `data1957`,
+          },
+          {
+            baseId: process.env.AIRTABLE_BASE_ID,
+            tableName: `data1958`,
+          },
+          {
+            baseId: process.env.AIRTABLE_BASE_ID,
+            tableName: `data1959`,
+          },
+          {
+            baseId: process.env.AIRTABLE_BASE_ID,
+            tableName: `data1960`,
+          },
+          {
+            baseId: process.env.AIRTABLE_BASE_ID,
+            tableName: `data1961`,
+          },
+          {
+            baseId: process.env.AIRTABLE_BASE_ID,
+            tableName: `data1962`,
+          },
+          {
+            baseId: process.env.AIRTABLE_BASE_ID,
+            tableName: `data1963`,
+          },
+          {
+            baseId: process.env.AIRTABLE_BASE_ID,
+            tableName: `data1964`,
+          },
+          {
+            baseId: process.env.AIRTABLE_BASE_ID,
             tableName: `data1965`,
+          },
+          {
+            baseId: process.env.AIRTABLE_BASE_ID,
+            tableName: `data1966`,
+          },
+          {
+            baseId: process.env.AIRTABLE_BASE_ID,
+            tableName: `data1967`,
+          },
+          {
+            baseId: process.env.AIRTABLE_BASE_ID,
+            tableName: `data1968`,
           },
         ],
       },
