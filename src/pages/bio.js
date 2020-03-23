@@ -37,21 +37,11 @@ export const bioQuery = graphql`
 export default ({ data }) => {
   return (
     <Layout>
-      <PageTitle title="Danceland Bio" />
-      <div className="mx-56">
-        <div className="flex justify-between">
-          <Img
-            fluid={data.bio1.childImageSharp.fluid}
-            className="w-full self-center mr-2"
-          />
-          <Img
-            fluid={data.bio2.childImageSharp.fluid}
-            className="w-full self-center mx-2"
-          />
-          <Img
-            fluid={data.bio3.childImageSharp.fluid}
-            className="w-full self-center ml-2"
-          />
+      <div className="max-w-screen-lg mx-auto">
+        <div className="flex justify-center">
+          <Img fluid={data.bio1.childImageSharp.fluid} className="w-64 mr-2" />
+          <Img fluid={data.bio2.childImageSharp.fluid} className="w-64 mx-2" />
+          <Img fluid={data.bio3.childImageSharp.fluid} className="w-64 ml-2" />
         </div>
         <p className="my-4">
           Danceland was billed as “Iowa’s Smartest Ballroom” and it would be

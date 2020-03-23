@@ -73,19 +73,19 @@ const Header = () => {
             <Link to="/">Home</Link>
           </li>
           <li className="mx-4 text-3xl uppercase p-2 hover:bg-black hover:text-white rounded">
-            <Link to="/">Early Years</Link>
+            <Link to="/early-years">Early Years</Link>
           </li>
           <li className="mx-4 text-3xl uppercase p-2 hover:bg-black hover:text-white rounded">
             <SearchDropdown />
           </li>
           <li className="mx-4 text-3xl uppercase p-2 hover:bg-black hover:text-white rounded">
-            <Link to="/">Danceland Bio</Link>
+            <Link to="/bio">Danceland Bio</Link>
           </li>
           <li className="mx-4 text-3xl uppercase p-2 hover:bg-black hover:text-white rounded">
-            <Link to="/">Posters</Link>
+            <Link to="/posters">Posters</Link>
           </li>
           <li className="ml-4 text-3xl uppercase p-2 hover:bg-black hover:text-white rounded">
-            <Link to="/">Danceland Bandstand</Link>
+            <Link to="/danceland-bandstand">Danceland Bandstand</Link>
           </li>
         </ul>
       </div>

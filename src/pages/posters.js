@@ -412,8 +412,7 @@ export const postersQuery = graphql`
 export default ({ data }) => {
   return (
     <Layout>
-      <PageTitle title="Posters" />
-      <div className="posters-grid px-56">
+      <div className="max-w-screen-xl mx-auto grid grid-cols-5 gap-2">
         <Img
           className="my-4"
           fluid={data.poster1.childImageSharp.fluid}
