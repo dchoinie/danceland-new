@@ -17,8 +17,8 @@ export default () => {
   return (
     <div className="bg-black text-white py-4 mt-12 px-24">
       <div className="max-w-screen-xl mx-auto flex flex-col items-center">
-        <div className="flex w-full justify-around border-b border-white pb-4">
-          <ul className="flex flex-col">
+        <div className="flex flex-col lg:flex-row w-full justify-around border-b border-white pb-4">
+          <ul className="flex flex-col text-center lg:text-left my-2 lg:my-0">
             <li>
               <h6 className="text-2xl text-gray-200">Navigate</h6>
             </li>
@@ -44,10 +44,10 @@ export default () => {
               <Link to="/">Contact</Link>
             </li>
           </ul>
-          <div className="flex flex-col">
+          <div className="flex flex-col text-center lg:text-left my-2 lg:my-0">
             <h6 className="text-2xl text-gray-200">Search By Year</h6>
-            <div className="flex justify-between">
-              <ul>
+            <div className="flex justify-center lg:justify-between">
+              <ul className="px-2 lg:px-0">
                 <li>
                   <Link to="/">1954</Link>
                 </li>
@@ -73,7 +73,7 @@ export default () => {
                   <Link to="/1961">1961</Link>
                 </li>
               </ul>
-              <ul>
+              <ul className="px-2 lg:px-0">
                 <li>
                   <Link to="/">1962</Link>
                 </li>
@@ -98,6 +98,7 @@ export default () => {
               </ul>
             </div>
           </div>
+          <div className="text-center lg:text-left my-2 lg:my-0">
           <ul>
             <li>
               <h6 className="text-2xl text-gray-200">Legal</h6>
@@ -109,6 +110,7 @@ export default () => {
               <Link to="/">Terms &amp; Conditions</Link>
             </li>
           </ul>
+          </div>
         </div>
         <div className="flex flex-col w-full items-center pt-4">
           <div className="flex justify-center py-2">
