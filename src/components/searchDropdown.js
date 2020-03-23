@@ -29,9 +29,9 @@ export default class SearchDropdown extends Component {
         onClick={() => this.toggleList()}
       >
         Search By Year
-        <div className="absolute w-full text-right">
+        <div className="absolute w-full text-center">
           {listOpen && (
-            <ul className="text-black bg-gray-100 p-2 mt-2">
+            <ul className="text-black text-xl bg-gray-100 p-2 mt-2">
               <li>
                 <Link to="/1954">1954</Link>
               </li>
