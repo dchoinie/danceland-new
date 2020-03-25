@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import { Link } from "gatsby"
+import { FaAngleDown, FaAngleUp } from "react-icons/fa"
 
 export default class SearchDropdown extends Component {
   constructor(props) {
@@ -24,63 +25,101 @@ export default class SearchDropdown extends Component {
   render() {
     const { listOpen } = this.state
     return (
-      <div
-        className="relative cursor-pointer"
-        onClick={() => this.toggleList()}
-      >
-        Search By Year
-        <div className="absolute w-full text-center">
+      <>
+        <div
+          className="flex cursor-pointer hover:underline"
+          onClick={() => this.toggleList()}
+          style={{ userSelect: "none" }}
+        >
+          Search By Year
+          {listOpen ? (
+            <FaAngleUp className="self-center ml-1" />
+          ) : (
+            <FaAngleDown className="self-center ml-1" />
+          )}
+        </div>
+        <div className="text-center">
           {listOpen && (
-            <ul className="text-black text-xl bg-gray-100 p-2 mt-2">
+            <ul className="text-black text-xl bg-white border border-black p-2 rounded absolute w-48">
               <li>
-                <Link to="/1954">1954</Link>
+                <Link to="/1954" className="hover:underline">
+                  1954
+                </Link>
               </li>
               <li>
-                <Link to="/1955">1955</Link>
+                <Link to="/1955" className="hover:underline">
+                  1955
+                </Link>
               </li>
               <li>
-                <Link to="/1956">1956</Link>
+                <Link to="/1956" className="hover:underline">
+                  1956
+                </Link>
               </li>
               <li>
-                <Link to="/1957">1957</Link>
+                <Link to="/1957" className="hover:underline">
+                  1957
+                </Link>
               </li>
               <li>
-                <Link to="/1958">1958</Link>
+                <Link to="/1958" className="hover:underline">
+                  1958
+                </Link>
               </li>
               <li>
-                <Link to="/1959">1959</Link>
+                <Link to="/1959" className="hover:underline">
+                  1959
+                </Link>
               </li>
               <li>
-                <Link to="/1960">1960</Link>
+                <Link to="/1960" className="hover:underline">
+                  1960
+                </Link>
               </li>
               <li>
-                <Link to="/1961">1961</Link>
+                <Link to="/1961" className="hover:underline">
+                  1961
+                </Link>
               </li>
               <li>
-                <Link to="/1962">1962</Link>
+                <Link to="/1962" className="hover:underline">
+                  1962
+                </Link>
               </li>
               <li>
-                <Link to="/1963">1963</Link>
+                <Link to="/1963" className="hover:underline">
+                  1963
+                </Link>
               </li>
               <li>
-                <Link to="/1964">1964</Link>
+                <Link to="/1964" className="hover:underline">
+                  1964
+                </Link>
               </li>
               <li>
-                <Link to="/1965">1965</Link>
+                <Link to="/1965" className="hover:underline">
+                  1965
+                </Link>
               </li>
               <li>
-                <Link to="/1966">1966</Link>
+                <Link to="/1966" className="hover:underline">
+                  1966
+                </Link>
               </li>
               <li>
-                <Link to="/1967">1967</Link>
+                <Link to="/1967" className="hover:underline">
+                  1967
+                </Link>
               </li>
               <li>
-                <Link to="/1968">1968</Link>
+                <Link to="/1968" className="hover:underline">
+                  1968
+                </Link>
               </li>
             </ul>
           )}
         </div>
-      </div>
+      </>
     )
   }
 }

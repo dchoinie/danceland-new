@@ -16,8 +16,8 @@ export default () => {
   `)
   return (
     <div className="bg-black text-white py-4 mt-12 px-24">
-      <div className="max-w-screen-xl mx-auto flex flex-col items-center">
-        <div className="flex flex-col lg:flex-row w-full justify-around border-b border-white pb-4">
+      <div className="max-w-screen-lg mx-auto flex flex-col items-center">
+        <div className="flex flex-col lg:flex-row w-full justify-between border-b border-white pb-4">
           <ul className="flex flex-col text-center lg:text-left my-2 lg:my-0">
             <li>
               <h6 className="text-2xl text-gray-200">Navigate</h6>
@@ -29,10 +29,10 @@ export default () => {
               <Link to="/">Early Years</Link>
             </li>
             <li>
-              <Link to="/">Danceland Bio</Link>
+              <Link to="/bio">Danceland Bio</Link>
             </li>
             <li>
-              <Link to="/">Posters</Link>
+              <Link to="/posters">Posters</Link>
             </li>
             <li>
               <Link to="/">Danceland Bandstand</Link>
@@ -49,7 +49,7 @@ export default () => {
             <div className="flex justify-center lg:justify-between">
               <ul className="px-2 lg:px-0">
                 <li>
-                  <Link to="/">1954</Link>
+                  <Link to="/1954">1954</Link>
                 </li>
                 <li>
                   <Link to="/1955">1955</Link>
@@ -75,7 +75,7 @@ export default () => {
               </ul>
               <ul className="px-2 lg:px-0">
                 <li>
-                  <Link to="/">1962</Link>
+                  <Link to="/1962">1962</Link>
                 </li>
                 <li>
                   <Link to="/1963">1963</Link>
@@ -99,17 +99,17 @@ export default () => {
             </div>
           </div>
           <div className="text-center lg:text-left my-2 lg:my-0">
-          <ul>
-            <li>
-              <h6 className="text-2xl text-gray-200">Legal</h6>
-            </li>
-            <li>
-              <Link to="/">Privacy Policy</Link>
-            </li>
-            <li>
-              <Link to="/">Terms &amp; Conditions</Link>
-            </li>
-          </ul>
+            <ul>
+              <li>
+                <h6 className="text-2xl text-gray-200">Legal</h6>
+              </li>
+              <li>
+                <Link to="/">Privacy Policy</Link>
+              </li>
+              <li>
+                <Link to="/">Terms &amp; Conditions</Link>
+              </li>
+            </ul>
           </div>
         </div>
         <div className="flex flex-col w-full items-center pt-4">

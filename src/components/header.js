@@ -31,13 +31,23 @@ class Hamburger extends Component {
         <FaBars />
         <div className="absolute whitespace-no-wrap" style={{ right: "0" }}>
           {navOpen && (
-            <ul className="text-right">
-              <li>Home</li>
-              <li>Early Years</li>
+            <ul className="text-right bg-white p-2 border border-black mt-2">
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/">Early Years</Link>
+              </li>
               <li>Search By Year</li>
-              <li>Danceland Bio</li>
-              <li>Posters</li>
-              <li>Danceland Bandstand</li>
+              <li>
+                <Link to="/bio">Danceland Bio</Link>
+              </li>
+              <li>
+                <Link to="/posters">Posters</Link>
+              </li>
+              <li>
+                <Link to="/">Danceland Bandstand</Link>
+              </li>
             </ul>
           )}
         </div>
@@ -69,23 +79,33 @@ const Header = () => {
       </div>
       <div className="hidden lg:flex lg:justify-center lg:py-4">
         <ul className="flex border-b border-black pb-2">
-          <li className="mr-4 text-3xl uppercase p-2 hover:bg-black hover:text-white rounded">
-            <Link to="/">Home</Link>
+          <li className="mr-4 text-3xl uppercase p-2 rounded">
+            <Link to="/" className="hover:underline">
+              Home
+            </Link>
           </li>
-          <li className="mx-4 text-3xl uppercase p-2 hover:bg-black hover:text-white rounded">
-            <Link to="/early-years">Early Years</Link>
+          <li className="mx-4 text-3xl uppercase p-2 rounded">
+            <Link to="/early-years" className="hover:underline">
+              Early Years
+            </Link>
           </li>
-          <li className="mx-4 text-3xl uppercase p-2 hover:bg-black hover:text-white rounded">
+          <li className="mx-4 text-3xl uppercase p-2 rounded">
             <SearchDropdown />
           </li>
-          <li className="mx-4 text-3xl uppercase p-2 hover:bg-black hover:text-white rounded">
-            <Link to="/bio">Danceland Bio</Link>
+          <li className="mx-4 text-3xl uppercase p-2 rounded">
+            <Link to="/bio" className="hover:underline">
+              Danceland Bio
+            </Link>
           </li>
-          <li className="mx-4 text-3xl uppercase p-2 hover:bg-black hover:text-white rounded">
-            <Link to="/posters">Posters</Link>
+          <li className="mx-4 text-3xl uppercase p-2 rounded">
+            <Link to="/posters" className="hover:underline">
+              Posters
+            </Link>
           </li>
-          <li className="ml-4 text-3xl uppercase p-2 hover:bg-black hover:text-white rounded">
-            <Link to="/danceland-bandstand">Danceland Bandstand</Link>
+          <li className="ml-4 text-3xl uppercase p-2 rounded">
+            <Link to="/danceland-bandstand" className="hover:underline">
+              Danceland Bandstand
+            </Link>
           </li>
         </ul>
       </div>

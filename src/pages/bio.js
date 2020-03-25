@@ -37,7 +37,7 @@ export const bioQuery = graphql`
 export default ({ data }) => {
   return (
     <Layout>
-      <div className="max-w-screen-lg mx-auto">
+      <div className="max-w-screen-lg mx-auto px-6 mt-12 lg:px-0 lg:mt-0">
         <div className="flex justify-center">
           <Img fluid={data.bio1.childImageSharp.fluid} className="w-64 mr-2" />
           <Img fluid={data.bio2.childImageSharp.fluid} className="w-64 mx-2" />

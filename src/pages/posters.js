@@ -412,7 +412,7 @@ export const postersQuery = graphql`
 export default ({ data }) => {
   return (
     <Layout>
-      <div className="max-w-screen-xl mx-auto grid grid-cols-5 gap-2">
+      <div className="max-w-screen-xl mx-auto grid grid-cols-2 lg:grid-cols-5 gap-1 lg:gap-2 px-6 lg:px-0 z-0">
         <Img
           className="my-4"
           fluid={data.poster1.childImageSharp.fluid}
