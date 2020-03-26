@@ -10,7 +10,7 @@ class TimelineRight extends Component {
 
   render() {
     return (
-      <div className="flex justify-center py-2">
+      <div className="flex justify-center p-2">
         {this.props.orderId % 2 !== 0 ? null : (
           <div className="flex flex-col w-full">
             <div>
@@ -23,7 +23,7 @@ class TimelineRight extends Component {
                 className="border-t border-gray-500"
                 style={{ marginLeft: "-10%", position: "relative" }}
               ></div>
-              <p className="text-center text-gray-700 text-xl">
+              <p className="text-center text-gray-700 text-xl h-8">
                 {this.props.price}
               </p>
             </div>

@@ -401,7 +401,7 @@ const data1966 = ({ data }) => {
     <Layout>
       <div className="bg-white max-w-screen-xl mx-auto">
         <YearHeader
-          img={data.dateTitle.childImageSharp.fluid}
+          img="https://via.placeholder.com/1280x920"
           summary="National acts that played at Danceland in 1966 include - The Animals, Mitch Ryder &amp; The Detroit Wheels, The Hollies, Jr. Walker &amp; The All Stars, The Vogues, ? &amp; The Mysterians, The Turtles, The Left Banke, Johnny &amp; The Hurricanes, The Gentrys, Cannibal &amp; The Headhunters, The McCoys, Jerry Lee Lewis, The T-Bones, New Colony Six, Gary Lewis &amp; The Playboys, Freddy Cannon, Dee Jay &amp; The Runaways, The Boys Next Door, Pete Klint Quintet, The Coachmen, Lou Christie, The Marketts, The Kingsmen"
         />
         <MonthHeader month="January" year="1966" />
