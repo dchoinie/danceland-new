@@ -40,7 +40,7 @@ export default class SearchDropdown extends Component {
         </div>
         <div className="text-center relative z-40">
           {listOpen && (
-            <ul className="text-black text-xl bg-white border border-black p-2 rounded absolute w-48">
+            <ul className="text-black bg-white border border-black p-2 rounded absolute w-48 leading-tight">
               <li>
                 <Link to="/1954" className="hover:underline">
                   1954

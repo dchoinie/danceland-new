@@ -1,11 +1,12 @@
 import React from "react"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import MonthHeader from "../components/monthHeader"
 import YearHeader from "../components/yearHeader"
 import TimelineLeft from "../components/timelineLeft"
 import TimelineDates from "../components/timelineDates"
 import TimelineRight from "../components/timelineRight"
-import { graphql } from "gatsby"
+import ToTop from "../components/toTop"
 
 export const query1967 = graphql`
   {
@@ -399,9 +400,10 @@ export const query1967 = graphql`
 const data1967 = ({ data }) => {
   return (
     <Layout>
+      <ToTop />
       <div className="bg-white max-w-screen-xl mx-auto">
         <YearHeader
-          img="https://via.placeholder.com/1280x920"
+          img={data.dateTitle.childImageSharp.fluid}
           summary="When it was becoming apparent Danceland was going to be a victim of an Urban Renewal project things started to go downhill, There were a few national bands booked for 1967 but they stopped pursuing any addition name acts, They would rely on an increasing number of local bands to carry on. Danceland was no longer running ads in the Cedar Rapids Gazette so it is unknown who played after August (if anyone). This was the beginning of the end. The known national acts that played at Danceland in 1967 include - The Music Machine, Sam The Sham &amp; The Pharaohs, The Cryan Shames, The Casinos, The Left Banke, The Fabulous Flippers, Pete Klint Quintet"
         />
         <MonthHeader month="January" year="1967" />

@@ -1,11 +1,12 @@
 import React from "react"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import MonthHeader from "../components/monthHeader"
 import YearHeader from "../components/yearHeader"
 import TimelineLeft from "../components/timelineLeft"
 import TimelineDates from "../components/timelineDates"
 import TimelineRight from "../components/timelineRight"
-import { graphql } from "gatsby"
+import ToTop from "../components/toTop"
 
 export const query1958 = graphql`
   {
@@ -399,6 +400,7 @@ export const query1958 = graphql`
 const data1958 = ({ data }) => {
   return (
     <Layout>
+      <ToTop />
       <div className="bg-white max-w-screen-xl mx-auto">
         <YearHeader
           img={data.dateTitle.childImageSharp.fluid}

@@ -71,7 +71,7 @@ const Header = () => {
     }
   `)
   return (
-    <nav className="flex justify-between lg:flex-col px-12">
+    <nav className="flex justify-between lg:flex-col px-12" id="nav">
       <div className="w-48 lg:w-full lg:flex lg:justify-center">
         <Link to="/" className="w-1/4">
           <Img fluid={data.logo.childImageSharp.fluid} />

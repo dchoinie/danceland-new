@@ -1,11 +1,12 @@
 import React from "react"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import MonthHeader from "../components/monthHeader"
 import YearHeader from "../components/yearHeader"
 import TimelineLeft from "../components/timelineLeft"
 import TimelineDates from "../components/timelineDates"
 import TimelineRight from "../components/timelineRight"
-import { graphql } from "gatsby"
+import ToTop from "../components/toTop"
 
 export const query1965 = graphql`
   {
@@ -399,10 +400,18 @@ export const query1965 = graphql`
 const data1966 = ({ data }) => {
   return (
     <Layout>
+      <ToTop />
       <div className="bg-white max-w-screen-xl mx-auto">
         <YearHeader
-          img="https://via.placeholder.com/1280x920"
-          summary="National acts that played at Danceland in 1966 include - The Animals, Mitch Ryder &amp; The Detroit Wheels, The Hollies, Jr. Walker &amp; The All Stars, The Vogues, ? &amp; The Mysterians, The Turtles, The Left Banke, Johnny &amp; The Hurricanes, The Gentrys, Cannibal &amp; The Headhunters, The McCoys, Jerry Lee Lewis, The T-Bones, New Colony Six, Gary Lewis &amp; The Playboys, Freddy Cannon, Dee Jay &amp; The Runaways, The Boys Next Door, Pete Klint Quintet, The Coachmen, Lou Christie, The Marketts, The Kingsmen"
+          img={data.dateTitle.childImageSharp.fluid}
+          summary="National acts that played at Danceland in 1966 include - The
+        Animals, Mitch Ryder &amp; The Detroit Wheels, The Hollies, Jr. Walker
+        &amp; The All Stars, The Vogues, ? &amp; The Mysterians, The Turtles,
+        The Left Banke, Johnny &amp; The Hurricanes, The Gentrys, Cannibal &amp;
+        The Headhunters, The McCoys, Jerry Lee Lewis, The T-Bones, New Colony
+        Six, Gary Lewis &amp; The Playboys, Freddy Cannon, Dee Jay &amp; The
+        Runaways, The Boys Next Door, Pete Klint Quintet, The Coachmen, Lou
+        Christie, The Marketts, The Kingsmen"
         />
         <MonthHeader month="January" year="1966" />
         <div>

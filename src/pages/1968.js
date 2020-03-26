@@ -1,11 +1,12 @@
 import React from "react"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import MonthHeader from "../components/monthHeader"
 import YearHeader from "../components/yearHeader"
 import TimelineLeft from "../components/timelineLeft"
 import TimelineDates from "../components/timelineDates"
 import TimelineRight from "../components/timelineRight"
-import { graphql } from "gatsby"
+import ToTop from "../components/toTop"
 
 export const query1968 = graphql`
   {
@@ -399,9 +400,10 @@ export const query1968 = graphql`
 const data1968 = ({ data }) => {
   return (
     <Layout>
+      <ToTop />
       <div className="bg-white max-w-screen-xl mx-auto">
         <YearHeader
-          img="https://via.placeholder.com/1280x920"
+          img={data.dateTitle.childImageSharp.fluid}
           summary="It is unknown who played the first part of 1968 (if anyone). The Pete Klint Quintet had the honor of playing the final dance on March 17."
         />
         <MonthHeader month="January" year="1968" />

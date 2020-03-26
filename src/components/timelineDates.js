@@ -9,7 +9,7 @@ class TimelineDates extends Component {
 
   render() {
     return (
-      <div className="flex flex-col items-center bg-blue-200 text-gray-800 justify-end p-2">
+      <div className="flex flex-col items-center bg-gray-300 text-gray-800 justify-end p-2">
         <h5 className="text-3xl uppercase text-gray-800">
           {this.props.fullDate}
         </h5>
