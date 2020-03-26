@@ -9,6 +9,15 @@ import { graphql } from "gatsby"
 
 export const query1968 = graphql`
   {
+    dateTitle: file(relativePath: { eq: "dateTitles/1968.jpg" }) {
+      childImageSharp {
+        fluid {
+          src
+          srcSet
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
     january: allAirtable(
       filter: { table: { eq: "data1968" }, data: { month: { eq: "January" } } }
       sort: { fields: data___orderId }
@@ -392,7 +401,7 @@ const data1968 = ({ data }) => {
     <Layout>
       <div className="bg-white max-w-screen-xl mx-auto">
         <YearHeader
-          img="https://via.placeholder.com/1280x920"
+          img={data.dateTitle.childImageSharp.fluid}
           summary="It is unknown who played the first part of 1968 (if anyone). The Pete Klint Quintet had the honor of playing the final dance on March 17."
         />
         <MonthHeader month="January" year="1968" />

@@ -41,7 +41,7 @@ export default () => {
               <Link to="/">Darlowe Oleson</Link>
             </li>
             <li>
-              <Link to="/">Contact</Link>
+              <Link to="/contact">Contact</Link>
             </li>
           </ul>
           <div className="flex flex-col text-center lg:text-left my-2 lg:my-0">

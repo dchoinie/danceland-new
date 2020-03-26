@@ -9,6 +9,15 @@ import { graphql } from "gatsby"
 
 export const query1959 = graphql`
   {
+    dateTitle: file(relativePath: { eq: "dateTitles/1959.jpg" }) {
+      childImageSharp {
+        fluid {
+          src
+          srcSet
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
     january: allAirtable(
       filter: { table: { eq: "data1959" }, data: { month: { eq: "January" } } }
       sort: { fields: data___orderId }
@@ -392,7 +401,7 @@ const data1959 = ({ data }) => {
     <Layout>
       <div className="bg-white max-w-screen-xl mx-auto">
         <YearHeader
-          img="https://via.placeholder.com/1280x920"
+          img={data.dateTitle.childImageSharp.fluid}
           summary="National acts that played at Danceland in 1959 include - Eddie Cochran, Dion &amp; The Belmonts, Johnny Horton, The Diamonds, Duane Eddy, Conway Twitty, Dale Hawkins, Johnny Cash &amp; The Tennessee Two, Frankie Avalon, Jimmy Clanton, Fabian, The Rockin’ R’s, Freddy Cannon, The Tempos, Buddy Knox, Johnny &amp; The Hurricanes, Tommy Edwards, The Big Beats, Santo &amp; Johnny, Frankie Ford, Gary Stites, Barbara Evans, The Rock-A-Teens, Jimmy Bowen, Johnny Carroll, Bill Sherrell &amp; The Dell-Tones, Sandy Nelson, Frankie Sardo, The Crickets with Ronnie Smith, The Mystics, Carl Dobkins, Jr., Skip &amp; Flip, Joe London, Floyd Robinson, Roscoe &amp; The Little Green Men, Kenny Loran, Dick Caruso, The Bell Notes, Tony Bellus, The Passions, Tommy Facenda, Bucky &amp; The Premieres, Debbie Stevens, Gary Shelton, Steve Bledsoe &amp; The Blue Jays, Tommy Dee, Suzi Arden, Jim Reeves, Judy Lynn, Cowboy Copas, Little Della Rae, Grandpa Jones, Pat Kelly &amp; The Shamrocks, Big Tiny Little, Bob &amp; Bobbie Thomas, “Whoopee” John Wilfahrt &amp; His Orchestra, Blue Barron &amp; His Orchestra, Paul Neighbors &amp; His Orchestra"
         />
         <MonthHeader month="January" year="1959" />

@@ -27,7 +27,7 @@ export default class SearchDropdown extends Component {
     return (
       <>
         <div
-          className="flex cursor-pointer hover:underline"
+          className="flex cursor-pointer hover:underline z-40"
           onClick={() => this.toggleList()}
           style={{ userSelect: "none" }}
         >
@@ -38,7 +38,7 @@ export default class SearchDropdown extends Component {
             <FaAngleDown className="self-center ml-1" />
           )}
         </div>
-        <div className="text-center">
+        <div className="text-center relative z-40">
           {listOpen && (
             <ul className="text-black text-xl bg-white border border-black p-2 rounded absolute w-48">
               <li>

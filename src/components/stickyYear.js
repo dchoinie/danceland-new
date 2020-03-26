@@ -8,8 +8,9 @@ export class StickyYear extends Component {
 
   render() {
     return (
-      <div className="sticky-year flex has-text-black">
-        <p className="text-xl">{this.props.year}</p>
+      <div className="hidden sticky-year lg:flex lg:flex-col lg:items-center">
+        <h6 className="text-xl">Current Year:</h6>
+        <h6 className="text-xl">{this.props.year}</h6>
       </div>
     )
   }

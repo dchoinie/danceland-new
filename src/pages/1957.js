@@ -9,6 +9,15 @@ import { graphql } from "gatsby"
 
 export const query1957 = graphql`
   {
+    dateTitle: file(relativePath: { eq: "dateTitles/1957.jpg" }) {
+      childImageSharp {
+        fluid {
+          src
+          srcSet
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
     january: allAirtable(
       filter: { table: { eq: "data1957" }, data: { month: { eq: "January" } } }
       sort: { fields: data___orderId }
@@ -392,7 +401,7 @@ const data1957 = ({ data }) => {
     <Layout>
       <div className="bg-white max-w-screen-xl mx-auto">
         <YearHeader
-          img="https://via.placeholder.com/1280x920"
+          img={data.dateTitle.childImageSharp.fluid}
           summary="National acts that played at Danceland in 1957 include - Johnny Cash, The Everly Brothers, Gene Vincent &amp; His Blue Caps, Jerry Lee Lewis, Buddy Knox, Jimmy Bowen, Bobby Helms, Wanda Jackson, Hank Thompson &amp; His Bravos Valley Boys, Porter Wagoner, Jim Reeves, Ray Price, Marty Robbins, Leroy Van Dyke, Leon McAuliffe &amp; His Cimarron Boys, Lee Emerson, Chuck Foster &amp; His Orchestra, Guy Lombardo &amp; His Orchestra, Don Glasser &amp; His Orchestra, Six Fat Dutchmen, “Whoopee” John Wilfahrt &amp; His Orchestra"
         />
         <MonthHeader month="January" year="1957" />

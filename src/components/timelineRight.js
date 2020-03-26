@@ -15,15 +15,17 @@ class TimelineRight extends Component {
           <div className="flex flex-col w-full">
             <div>
               <div className="flex flex-col items-center">
-                <p className="text-xl ml-1 text-gray-800 text-center uppercase font-bold">
+                <h4 className="text-2xl lg:text-5xl ml-1 text-gray-800 text-center uppercase">
                   {this.props.artist}
-                </p>
+                </h4>
               </div>
               <div
                 className="border-t border-gray-500"
                 style={{ marginLeft: "-10%", position: "relative" }}
               ></div>
-              <p className="text-center text-gray-700">{this.props.price}</p>
+              <p className="text-center text-gray-700 text-xl">
+                {this.props.price}
+              </p>
             </div>
           </div>
         )}

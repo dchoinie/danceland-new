@@ -17,18 +17,18 @@ export class recordSpinnerSelectors extends Component {
     return (
       <div>
         <Link to={this.props.to}>
-          <div className="flex justify-center" style={{ position: "relative" }}>
+          <div className="flex justify-center relative">
             <img
               onMouseOver={() => this.setState({ isHovered: true })}
               onMouseLeave={() => this.setState({ isHovered: false })}
               className={this.state.isHovered ? "rotate" : ""}
               src={Vinyl}
-              alt=""
+              alt="vinyl year selector"
             />
             <h2
               onMouseOver={() => this.setState({ isHovered: true })}
               onMouseLeave={() => this.setState({ isHovered: false })}
-              className="text-5xl text-white font-bold quicksand has-text-white"
+              className="text-white text-5xl lg:text-8xl"
               style={{
                 position: "absolute",
                 top: "50%",

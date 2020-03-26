@@ -9,6 +9,15 @@ import { graphql } from "gatsby"
 
 export const query1961 = graphql`
   {
+    dateTitle: file(relativePath: { eq: "dateTitles/1961.jpg" }) {
+      childImageSharp {
+        fluid {
+          src
+          srcSet
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
     january: allAirtable(
       filter: { table: { eq: "data1961" }, data: { month: { eq: "January" } } }
       sort: { fields: data___orderId }
@@ -392,7 +401,7 @@ const data1961 = ({ data }) => {
     <Layout>
       <div className="bg-white max-w-screen-xl mx-auto">
         <YearHeader
-          img="https://via.placeholder.com/1280x920"
+          img={data.dateTitle.childImageSharp.fluid}
           summary="National acts that played at Danceland in 1961 include - The Ventures, Del Shannon, Bobby Vee, Donnie Brooks, Dion, Jimmy Dean, Conway Twitty, Ray Stevens, Johnny Cash, Danny &amp; The Juniors, Bill Black’s Combo, Jan &amp; Dean, Dick &amp; Dee Dee, Bobby Vinton, Larry Verne, The Champs, Buck Owens, The Fendermen, Tony Orlando, Cathy Jean &amp; The Roommates, Johnny Burnette, Buddy Knox, Dicky Doo &amp; The Don’ts, Jerry Fuller, Wanda Jackson, Ral Donner, The String-A-Longs, Bobby Bare, Johnny &amp; The Hurricanes, Gary Stites, Janie Grant, Ray Ruff, Gene Simmons, Johnny Maestro, Ersel Hickey, Chuck Tharp, Gerry Granahan, B. Bumble &amp; The Stingers, Bobby Lord, Johnny Western, The Velaires, Pee Wee Hunt &amp; His Twelfth Street Ragtime Band"
         />
         <MonthHeader month="January" year="1961" />

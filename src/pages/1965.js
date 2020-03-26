@@ -9,6 +9,15 @@ import { graphql } from "gatsby"
 
 export const query1965 = graphql`
   {
+    dateTitle: file(relativePath: { eq: "dateTitles/1965.jpg" }) {
+      childImageSharp {
+        fluid {
+          src
+          srcSet
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
     january: allAirtable(
       filter: { table: { eq: "data1965" }, data: { month: { eq: "January" } } }
       sort: { fields: data___orderId }
@@ -392,7 +401,7 @@ const data1965 = ({ data }) => {
     <Layout>
       <div className="bg-white max-w-screen-xl mx-auto">
         <YearHeader
-          img="https://via.placeholder.com/1280x920"
+          img={data.dateTitle.childImageSharp.fluid}
           summary="National acts that played at Danceland in 1965 include - The
               Yardbirds, The Turtles, Beau Brummels, Gary Lewis &amp; The
               Playboys, Chuck Berry, The Everly Brothers, Brenda Lee, The Gants,

@@ -9,11 +9,13 @@ class TimelineDates extends Component {
 
   render() {
     return (
-      <div className="flex flex-col items-center bg-blue-200 text-gray-800 py-2">
-        <h5 className="text-2xl uppercase text-gray-800">
+      <div className="flex flex-col items-center bg-blue-200 text-gray-800 py-2 justify-end">
+        <h5 className="text-3xl uppercase text-gray-800">
           {this.props.fullDate}
         </h5>
-        <p className="text-base text-gray-600">{this.props.weekday}</p>
+        <p className="text-base text-gray-600 uppercase font-bold">
+          {this.props.weekday}
+        </p>
       </div>
     )
   }

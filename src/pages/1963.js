@@ -9,6 +9,15 @@ import { graphql } from "gatsby"
 
 export const query1963 = graphql`
   {
+    dateTitle: file(relativePath: { eq: "dateTitles/1963.jpg" }) {
+      childImageSharp {
+        fluid {
+          src
+          srcSet
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
     january: allAirtable(
       filter: { table: { eq: "data1963" }, data: { month: { eq: "January" } } }
       sort: { fields: data___orderId }
@@ -392,7 +401,7 @@ const data1963 = ({ data }) => {
     <Layout>
       <div className="bg-white max-w-screen-xl mx-auto">
         <YearHeader
-          img="https://via.placeholder.com/1280x920"
+          img={data.dateTitle.childImageSharp.fluid}
           summary="National acts that played at Danceland in 1963 include - The Beach Boys, 4 Seasons, Chubby Checker, Conway Twitty, Dion, Roy Orbison, Little Peggy March, The Fendermen, The Ventures, Freddy Cannon, Jerry Lee Lewis, The Everly Brothers, Sandy Nelson, Bobby Vinton, Pastel Six, Dick &amp; Dee Dee, Johnny Tillotson, Paul &amp; Paula, Crickets, Timi Yuro, The Kingsmen, Tommy Roe, Jimmy Gilmer &amp; The Fireballs, Brian Hyland, Lou Christie, Jay &amp; The Americans, Bill Black’s Combo, Joey Dee &amp; The Starliters, Johnny Cymbal, Steve Alaimo, Johnny &amp; The Hurricanes, Myron Lee &amp; The Caddies, Charlie Russo, The Velaires, Wanda Jackson, Burch Ray &amp; The Walkers, Lonnie Mack, The Champs, Little Jimmy Dickens, The Strangers, Six Fat Dutchmen, George Hamilton IV"
         />
         <MonthHeader month="January" year="1963" />

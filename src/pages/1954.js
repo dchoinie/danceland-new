@@ -9,6 +9,15 @@ import { graphql } from "gatsby"
 
 export const query1954 = graphql`
   {
+    dateTitle: file(relativePath: { eq: "dateTitles/1954.jpg" }) {
+      childImageSharp {
+        fluid {
+          src
+          srcSet
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
     january: allAirtable(
       filter: { table: { eq: "data1954" }, data: { month: { eq: "January" } } }
       sort: { fields: data___orderId }
@@ -392,8 +401,11 @@ const data1954 = ({ data }) => {
     <Layout>
       <div className="bg-white max-w-screen-xl mx-auto">
         <YearHeader
-          img="https://via.placeholder.com/1280x920"
-          summary="National acts that played at Danceland in 1954 include - Wayne King &amp; His Orchestra, “Whoopee” John Wilfahrt &amp; His Orchestra, WNAX Bohemian Band, Fezz Fritsche &amp; His Goosetown Band, Six Fat Dutchmen, Frank Yankovic &amp; His Yanks"
+          img={data.dateTitle.childImageSharp.fluid}
+          summary="National acts that played at Danceland in 1954 include - Wayne
+        King &amp; His Orchestra, “Whoopee” John Wilfahrt &amp; His Orchestra,
+        WNAX Bohemian Band, Fezz Fritsche &amp; His Goosetown Band, Six Fat
+        Dutchmen, Frank Yankovic &amp; His Yanks"
         />
         <MonthHeader month="January" year="1954" />
         <div>

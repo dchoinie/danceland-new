@@ -9,6 +9,15 @@ import { graphql } from "gatsby"
 
 export const query1958 = graphql`
   {
+    dateTitle: file(relativePath: { eq: "dateTitles/1958.jpg" }) {
+      childImageSharp {
+        fluid {
+          src
+          srcSet
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
     january: allAirtable(
       filter: { table: { eq: "data1958" }, data: { month: { eq: "January" } } }
       sort: { fields: data___orderId }
@@ -392,7 +401,7 @@ const data1958 = ({ data }) => {
     <Layout>
       <div className="bg-white max-w-screen-xl mx-auto">
         <YearHeader
-          img="https://via.placeholder.com/1280x920"
+          img={data.dateTitle.childImageSharp.fluid}
           summary="National acts that played at Danceland in 1958 include - Gene Vincent &amp; The Blue Caps, Bobby Darin, Dion &amp; The Belmonts, Buddy Knox, Jimmy Bowen, The Crescendos, Johnny Cash, Carl Perkins, Jimmy Clanton, The Big Beats, Jo Ann Campbell, Wanda Jackson, Bobby Helms, Will Mercer, The Dukes Of Dixieland, Richard Maltby, Don Gibson, Jim Reeves, Hank Thompson &amp; His Brazos Valley Boys, Billy Walker, Kitty Wells, Jimmy Newman, Leon McAuliffe, Norma Jean, Bobby Lord, Johnnie &amp; Jack, “Whoopee” John Wilfahrt &amp; His Orchestra, Tony Pastor, Teddy Phillips &amp; His Orchestra, Chuck Foster &amp; His Orchestra"
         />
         <MonthHeader month="January" year="1958" />

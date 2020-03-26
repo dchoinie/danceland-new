@@ -9,6 +9,15 @@ import { graphql } from "gatsby"
 
 export const query1955 = graphql`
   {
+    dateTitle: file(relativePath: { eq: "dateTitles/1955.jpg" }) {
+      childImageSharp {
+        fluid {
+          src
+          srcSet
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
     january: allAirtable(
       filter: { table: { eq: "data1955" }, data: { month: { eq: "January" } } }
       sort: { fields: data___orderId }
@@ -392,7 +401,7 @@ const data1955 = ({ data }) => {
     <Layout>
       <div className="bg-white max-w-screen-xl mx-auto">
         <YearHeader
-          img="https://via.placeholder.com/1280x920"
+          img={data.dateTitle.childImageSharp.fluid}
           summary="1955 was the year live rock and roll came to Cedar Rapids. The date was October 6th and the band was Bill Haley &amp; His Comets. That would signal the beginning of Danceland being the place for eastern Iowans to witness live rock and roll. Later that month Boyd Bennett &amp; His Rockets, became the second rock and rollers to make an appearance. Also gracing the Danceland stage in 1955 were the innovating orchestra of Sauter-Finegan, polka great “Whoopee” John Wilfahrt &amp; His Orchestra and Yankton South Dakota’s popular WNAX Bohemian Band. Major country acts include Pee Wee King &amp; His Golden West Cowboys and Bob Wills &amp; His Texas Playboys."
         />
         <MonthHeader month="January" year="1955" />

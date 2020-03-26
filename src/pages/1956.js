@@ -9,6 +9,15 @@ import { graphql } from "gatsby"
 
 export const query1956 = graphql`
   {
+    dateTitle: file(relativePath: { eq: "dateTitles/1956.jpg" }) {
+      childImageSharp {
+        fluid {
+          src
+          srcSet
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
     january: allAirtable(
       filter: { table: { eq: "data1956" }, data: { month: { eq: "January" } } }
       sort: { fields: data___orderId }
@@ -392,7 +401,7 @@ const data1956 = ({ data }) => {
     <Layout>
       <div className="bg-white max-w-screen-xl mx-auto">
         <YearHeader
-          img="https://via.placeholder.com/1280x920"
+          img={data.dateTitle.childImageSharp.fluid}
           summary="National acts that played at Danceland in 1956 include: Boyd Bennett &amp; His Rockets, Wanda Jackson, Faron Young, Webb Pierce, Marvin Rainwater, Porter Wagoner, Hank Thompson &amp; His Bravos Valley Boys, Red Sovine, Bill Wimberly &amp; His Country Rhythm Boys, Bobby Lord, Jimmy &amp; Johnny, Rusty Draper, Dick Mango &amp; His Orchestra, Ray Pearl &amp; His Musical Gems, Six Fat Dutchmen, “Whoopee” John Wilfahrt &amp; His Orchestra"
         />
         <MonthHeader month="January" year="1956" />

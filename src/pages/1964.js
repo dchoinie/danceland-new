@@ -9,6 +9,15 @@ import { graphql } from "gatsby"
 
 export const query1964 = graphql`
   {
+    dateTitle: file(relativePath: { eq: "dateTitles/1964.jpg" }) {
+      childImageSharp {
+        fluid {
+          src
+          srcSet
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
     january: allAirtable(
       filter: { table: { eq: "data1964" }, data: { month: { eq: "January" } } }
       sort: { fields: data___orderId }
@@ -392,7 +401,7 @@ const data1964 = ({ data }) => {
     <Layout>
       <div className="bg-white max-w-screen-xl mx-auto">
         <YearHeader
-          img="https://via.placeholder.com/1280x920"
+          img={data.dateTitle.childImageSharp.fluid}
           summary="National acts that played at Danceland in 1964 include - Jan &amp; Dean, The Ronettes, Chuck Berry, Roy Orbison, Chad &amp; Jeremy, Dee Dee Sharp, The Everly Brothers, Roger Miller, The Crystals, Dale &amp; Grace, Bobby Vee, The Astronauts, Nino Tempo &amp; April Stevens, Bobby Vinton, Jerry Lee Lewis, Brian Hyland, The Rip Chords, Terry Stafford, Bobby Goldsboro, The Hondells, Conway Twitty, The Champs, Lonnie Mack, Johnny &amp; The Hurricanes, The Fabulous Flippers, Ronny &amp; The Daytonas, The Trashmen, Gene Simmons, The Marketts, Jimmy Clanton, Troy Shondell, Myron Lee &amp; The Caddies, Bill Black’s Combo, The Rivieras, Buddy Knox"
         />
         <MonthHeader month="January" year="1964" />
