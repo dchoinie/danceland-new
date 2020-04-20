@@ -8,8 +8,8 @@ export default class MonthHeader extends Component {
   }
   render() {
     return (
-      <div className="flex w-full bg-black justify-center py-4">
-        <h2 className="text-white text-3xl lg:text-6xl uppercase">
+      <div className="flex w-full bg-black justify-center py-2">
+        <h2 className="text-white text-3xl lg:text-5xl uppercase">
           {this.props.month}, {this.props.year}
         </h2>
       </div>

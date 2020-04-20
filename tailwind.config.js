@@ -1,5 +1,12 @@
 module.exports = {
   theme: {
+    inset: {
+      "4": "1rem",
+      "6": "1,5rem",
+      "8": "2rem",
+      "10": "2.5rem",
+      "12": "3rem",
+    },
     extend: {},
     fontSize: {
       xs: ".75rem",
