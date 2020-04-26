@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import BackgroundImage from "gatsby-background-image"
 
@@ -214,68 +214,98 @@ const IndexPage = ({ data }) => {
           </div>
           <div className="flex justify-between w-1/2 p-6">
             <div className="flex flex-col w-1/2">
-              <Img
-                fluid={data.date1954.childImageSharp.fluid}
-                className="w-full"
-              />
-              <Img
-                fluid={data.date1955.childImageSharp.fluid}
-                className="w-full"
-              />
-              <Img
-                fluid={data.date1956.childImageSharp.fluid}
-                className="w-full"
-              />
-              <Img
-                fluid={data.date1957.childImageSharp.fluid}
-                className="w-full"
-              />
-              <Img
-                fluid={data.date1958.childImageSharp.fluid}
-                className="w-full"
-              />
-              <Img
-                fluid={data.date1959.childImageSharp.fluid}
-                className="w-full"
-              />
-              <Img
-                fluid={data.date1960.childImageSharp.fluid}
-                className="w-full"
-              />
-              <Img
-                fluid={data.date1961.childImageSharp.fluid}
-                className="w-full"
-              />
+              <Link to="/1954">
+                <Img
+                  fluid={data.date1954.childImageSharp.fluid}
+                  className="w-full transform hover:scale-105"
+                />
+              </Link>
+              <Link to="/1955">
+                <Img
+                  fluid={data.date1955.childImageSharp.fluid}
+                  className="w-full transform hover:scale-105"
+                />
+              </Link>
+              <Link to="/1956">
+                <Img
+                  fluid={data.date1956.childImageSharp.fluid}
+                  className="w-full transform hover:scale-105"
+                />
+              </Link>
+              <Link to="/1957">
+                <Img
+                  fluid={data.date1957.childImageSharp.fluid}
+                  className="w-full transform hover:scale-105"
+                />
+              </Link>
+              <Link to="/1958">
+                <Img
+                  fluid={data.date1958.childImageSharp.fluid}
+                  className="w-full transform hover:scale-105"
+                />
+              </Link>
+              <Link to="/1959">
+                <Img
+                  fluid={data.date1959.childImageSharp.fluid}
+                  className="w-full transform hover:scale-105"
+                />
+              </Link>
+              <Link to="/1960">
+                <Img
+                  fluid={data.date1960.childImageSharp.fluid}
+                  className="w-full transform hover:scale-105"
+                />
+              </Link>
+              <Link to="/1961">
+                <Img
+                  fluid={data.date1961.childImageSharp.fluid}
+                  className="w-full transform hover:scale-105"
+                />
+              </Link>
             </div>
             <div className="flex flex-col w-1/2">
-              <Img
-                fluid={data.date1962.childImageSharp.fluid}
-                className="w-full"
-              />
-              <Img
-                fluid={data.date1963.childImageSharp.fluid}
-                className="w-full"
-              />
-              <Img
-                fluid={data.date1964.childImageSharp.fluid}
-                className="w-full"
-              />
-              <Img
-                fluid={data.date1965.childImageSharp.fluid}
-                className="w-full"
-              />
-              <Img
-                fluid={data.date1966.childImageSharp.fluid}
-                className="w-full"
-              />
-              <Img
-                fluid={data.date1967.childImageSharp.fluid}
-                className="w-full"
-              />
-              <Img
-                fluid={data.date1968.childImageSharp.fluid}
-                className="w-full"
-              />
+              <Link to="/1962">
+                <Img
+                  fluid={data.date1962.childImageSharp.fluid}
+                  className="w-full transform hover:scale-105"
+                />
+              </Link>
+              <Link to="/1963">
+                <Img
+                  fluid={data.date1963.childImageSharp.fluid}
+                  className="w-full transform hover:scale-105"
+                />
+              </Link>
+              <Link to="/1964">
+                <Img
+                  fluid={data.date1964.childImageSharp.fluid}
+                  className="w-full transform hover:scale-105"
+                />
+              </Link>
+              <Link to="/1965">
+                <Img
+                  fluid={data.date1965.childImageSharp.fluid}
+                  className="w-full transform hover:scale-105"
+                />
+              </Link>
+              <Link to="/1966">
+                <Img
+                  fluid={data.date1966.childImageSharp.fluid}
+                  className="w-full transform hover:scale-105"
+                />
+              </Link>
+              <Link to="/1967">
+                <Img
+                  fluid={data.date1967.childImageSharp.fluid}
+                  className="w-full transform hover:scale-105"
+                />
+              </Link>
+              <Link to="/1968">
+                <Img
+                  fluid={data.date1968.childImageSharp.fluid}
+                  className="w-full transform hover:scale-105"
+                />
+              </Link>
             </div>
           </div>
         </div>

@@ -46,6 +46,8 @@ export const query1965 = graphql`
             price
             weekday
             year
+            comment1
+            comment2
           }
         }
       }
@@ -77,6 +79,8 @@ export const query1965 = graphql`
             price
             weekday
             year
+            comment1
+            comment2
           }
         }
       }
@@ -108,6 +112,8 @@ export const query1965 = graphql`
             price
             weekday
             year
+            comment1
+            comment2
           }
         }
       }
@@ -139,6 +145,8 @@ export const query1965 = graphql`
             price
             weekday
             year
+            comment1
+            comment2
           }
         }
       }
@@ -170,6 +178,8 @@ export const query1965 = graphql`
             price
             weekday
             year
+            comment1
+            comment2
           }
         }
       }
@@ -201,6 +211,8 @@ export const query1965 = graphql`
             price
             weekday
             year
+            comment1
+            comment2
           }
         }
       }
@@ -232,6 +244,8 @@ export const query1965 = graphql`
             price
             weekday
             year
+            comment1
+            comment2
           }
         }
       }
@@ -263,6 +277,8 @@ export const query1965 = graphql`
             price
             weekday
             year
+            comment1
+            comment2
           }
         }
       }
@@ -297,6 +313,8 @@ export const query1965 = graphql`
             price
             weekday
             year
+            comment1
+            comment2
           }
         }
       }
@@ -328,6 +346,8 @@ export const query1965 = graphql`
             price
             weekday
             year
+            comment1
+            comment2
           }
         }
       }
@@ -359,6 +379,8 @@ export const query1965 = graphql`
             price
             weekday
             year
+            comment1
+            comment2
           }
         }
       }
@@ -390,6 +412,8 @@ export const query1965 = graphql`
             price
             weekday
             year
+            comment1
+            comment2
           }
         }
       }
@@ -433,6 +457,7 @@ const data1965 = ({ data }) => {
                   />
                   {node.data.orderId % 2 == 0 ? null : (
                     <div className="flex flex-col items-center p-2">
+                      <p className="mb-2">{node.data.comment1}</p>
                       {node.data.img1 && node.data.img1.url !== 0 ? (
                         <div className="flex justify-center">
                           <img
@@ -460,6 +485,7 @@ const data1965 = ({ data }) => {
                           />
                         </div>
                       ) : null}
+                      <p className="mt-2">{node.data.comment2}</p>
                     </div>
                   )}
                 </div>
@@ -478,6 +504,7 @@ const data1965 = ({ data }) => {
                   />
                   {node.data.orderId % 2 !== 0 ? null : (
                     <div className="flex flex-col items-center p-2">
+                      <p className="mb-2">{node.data.comment1}</p>
                       {node.data.img1 && node.data.img1.url !== 0 ? (
                         <div className="flex justify-center">
                           <img
@@ -505,6 +532,7 @@ const data1965 = ({ data }) => {
                           />
                         </div>
                       ) : null}
+                      <p className="mt-2">{node.data.comment2}</p>
                     </div>
                   )}
                 </div>
@@ -527,6 +555,7 @@ const data1965 = ({ data }) => {
                   />
                   {node.data.orderId % 2 == 0 ? null : (
                     <div className="flex flex-col items-center p-2">
+                      <p className="mb-2">{node.data.comment1}</p>
                       {node.data.img1 && node.data.img1.url !== 0 ? (
                         <div className="flex justify-center">
                           <img
@@ -554,6 +583,7 @@ const data1965 = ({ data }) => {
                           />
                         </div>
                       ) : null}
+                      <p className="mt-2">{node.data.comment2}</p>
                     </div>
                   )}
                 </div>
@@ -572,6 +602,7 @@ const data1965 = ({ data }) => {
                   />
                   {node.data.orderId % 2 !== 0 ? null : (
                     <div className="flex flex-col items-center p-2">
+                      <p className="mb-2">{node.data.comment1}</p>
                       {node.data.img1 && node.data.img1.url !== 0 ? (
                         <div className="flex justify-center">
                           <img
@@ -599,6 +630,7 @@ const data1965 = ({ data }) => {
                           />
                         </div>
                       ) : null}
+                      <p className="mt-2">{node.data.comment2}</p>
                     </div>
                   )}
                 </div>
@@ -621,6 +653,7 @@ const data1965 = ({ data }) => {
                   />
                   {node.data.orderId % 2 == 0 ? null : (
                     <div className="flex flex-col items-center p-2">
+                      <p className="mb-2">{node.data.comment1}</p>
                       {node.data.img1 && node.data.img1.url !== 0 ? (
                         <div className="flex justify-center">
                           <img
@@ -648,6 +681,7 @@ const data1965 = ({ data }) => {
                           />
                         </div>
                       ) : null}
+                      <p className="mt-2">{node.data.comment2}</p>
                     </div>
                   )}
                 </div>
@@ -666,6 +700,7 @@ const data1965 = ({ data }) => {
                   />
                   {node.data.orderId % 2 !== 0 ? null : (
                     <div className="flex flex-col items-center p-2">
+                      <p className="mb-2">{node.data.comment1}</p>
                       {node.data.img1 && node.data.img1.url !== 0 ? (
                         <div className="flex">
                           <img
@@ -715,6 +750,7 @@ const data1965 = ({ data }) => {
                   />
                   {node.data.orderId % 2 == 0 ? null : (
                     <div className="flex flex-col items-center p-2">
+                      <p className="mb-2">{node.data.comment1}</p>
                       {node.data.img1 && node.data.img1.url !== 0 ? (
                         <div className="flex justify-center">
                           <img
@@ -742,6 +778,7 @@ const data1965 = ({ data }) => {
                           />
                         </div>
                       ) : null}
+                      <p className="mt-2">{node.data.comment2}</p>
                     </div>
                   )}
                 </div>
@@ -760,6 +797,7 @@ const data1965 = ({ data }) => {
                   />
                   {node.data.orderId % 2 !== 0 ? null : (
                     <div className="flex flex-col items-center p-2">
+                      <p className="mb-2">{node.data.comment1}</p>
                       {node.data.img1 && node.data.img1.url !== 0 ? (
                         <div className="flex">
                           <img
@@ -809,6 +847,7 @@ const data1965 = ({ data }) => {
                   />
                   {node.data.orderId % 2 == 0 ? null : (
                     <div className="flex flex-col items-center p-2">
+                      <p className="mb-2">{node.data.comment1}</p>
                       {node.data.img1 && node.data.img1.url !== 0 ? (
                         <div className="flex justify-center">
                           <img
@@ -836,6 +875,7 @@ const data1965 = ({ data }) => {
                           />
                         </div>
                       ) : null}
+                      <p className="mt-2">{node.data.comment2}</p>
                     </div>
                   )}
                 </div>
@@ -854,6 +894,7 @@ const data1965 = ({ data }) => {
                   />
                   {node.data.orderId % 2 !== 0 ? null : (
                     <div className="flex flex-col items-center p-2">
+                      <p className="mb-2">{node.data.comment1}</p>
                       {node.data.img1 && node.data.img1.url !== 0 ? (
                         <div className="flex">
                           <img
@@ -903,6 +944,7 @@ const data1965 = ({ data }) => {
                   />
                   {node.data.orderId % 2 == 0 ? null : (
                     <div className="flex flex-col items-center p-2">
+                      <p className="mb-2">{node.data.comment1}</p>
                       {node.data.img1 && node.data.img1.url !== 0 ? (
                         <div className="flex justify-center">
                           <img
@@ -930,6 +972,7 @@ const data1965 = ({ data }) => {
                           />
                         </div>
                       ) : null}
+                      <p className="mt-2">{node.data.comment2}</p>
                     </div>
                   )}
                 </div>
@@ -948,6 +991,7 @@ const data1965 = ({ data }) => {
                   />
                   {node.data.orderId % 2 !== 0 ? null : (
                     <div className="flex flex-col items-center p-2">
+                      <p className="mb-2">{node.data.comment1}</p>
                       {node.data.img1 && node.data.img1.url !== 0 ? (
                         <div className="flex">
                           <img
@@ -997,6 +1041,7 @@ const data1965 = ({ data }) => {
                   />
                   {node.data.orderId % 2 == 0 ? null : (
                     <div className="flex flex-col items-center p-2">
+                      <p className="mb-2">{node.data.comment1}</p>
                       {node.data.img1 && node.data.img1.url !== 0 ? (
                         <div className="flex justify-center">
                           <img
@@ -1024,6 +1069,7 @@ const data1965 = ({ data }) => {
                           />
                         </div>
                       ) : null}
+                      <p className="mt-2">{node.data.comment2}</p>
                     </div>
                   )}
                 </div>
@@ -1042,6 +1088,7 @@ const data1965 = ({ data }) => {
                   />
                   {node.data.orderId % 2 !== 0 ? null : (
                     <div className="flex flex-col items-center p-2">
+                      <p className="mb-2">{node.data.comment1}</p>
                       {node.data.img1 && node.data.img1.url !== 0 ? (
                         <div className="flex">
                           <img
@@ -1091,6 +1138,7 @@ const data1965 = ({ data }) => {
                   />
                   {node.data.orderId % 2 == 0 ? null : (
                     <div className="flex flex-col items-center p-2">
+                      <p className="mb-2">{node.data.comment1}</p>
                       {node.data.img1 && node.data.img1.url !== 0 ? (
                         <div className="flex justify-center">
                           <img
@@ -1118,6 +1166,7 @@ const data1965 = ({ data }) => {
                           />
                         </div>
                       ) : null}
+                      <p className="mt-2">{node.data.comment2}</p>
                     </div>
                   )}
                 </div>
@@ -1136,6 +1185,7 @@ const data1965 = ({ data }) => {
                   />
                   {node.data.orderId % 2 !== 0 ? null : (
                     <div className="flex flex-col items-center p-2">
+                      <p className="mb-2">{node.data.comment1}</p>
                       {node.data.img1 && node.data.img1.url !== 0 ? (
                         <div className="flex">
                           <img
@@ -1185,6 +1235,7 @@ const data1965 = ({ data }) => {
                   />
                   {node.data.orderId % 2 == 0 ? null : (
                     <div className="flex flex-col items-center p-2">
+                      <p className="mb-2">{node.data.comment1}</p>
                       {node.data.img1 && node.data.img1.url !== 0 ? (
                         <div className="flex justify-center">
                           <img
@@ -1212,6 +1263,7 @@ const data1965 = ({ data }) => {
                           />
                         </div>
                       ) : null}
+                      <p className="mt-2">{node.data.comment2}</p>
                     </div>
                   )}
                 </div>
@@ -1230,6 +1282,7 @@ const data1965 = ({ data }) => {
                   />
                   {node.data.orderId % 2 !== 0 ? null : (
                     <div className="flex flex-col items-center p-2">
+                      <p className="mb-2">{node.data.comment1}</p>
                       {node.data.img1 && node.data.img1.url !== 0 ? (
                         <div className="flex">
                           <img
@@ -1279,6 +1332,7 @@ const data1965 = ({ data }) => {
                   />
                   {node.data.orderId % 2 == 0 ? null : (
                     <div className="flex flex-col items-center p-2">
+                      <p className="mb-2">{node.data.comment1}</p>
                       {node.data.img1 && node.data.img1.url !== 0 ? (
                         <div className="flex justify-center">
                           <img
@@ -1306,6 +1360,7 @@ const data1965 = ({ data }) => {
                           />
                         </div>
                       ) : null}
+                      <p className="mt-2">{node.data.comment2}</p>
                     </div>
                   )}
                 </div>
@@ -1324,6 +1379,7 @@ const data1965 = ({ data }) => {
                   />
                   {node.data.orderId % 2 !== 0 ? null : (
                     <div className="flex flex-col items-center p-2">
+                      <p className="mb-2">{node.data.comment1}</p>
                       {node.data.img1 && node.data.img1.url !== 0 ? (
                         <div className="flex">
                           <img
@@ -1373,6 +1429,7 @@ const data1965 = ({ data }) => {
                   />
                   {node.data.orderId % 2 == 0 ? null : (
                     <div className="flex flex-col items-center p-2">
+                      <p className="mb-2">{node.data.comment1}</p>
                       {node.data.img1 && node.data.img1.url !== 0 ? (
                         <div className="flex justify-center">
                           <img
@@ -1400,6 +1457,7 @@ const data1965 = ({ data }) => {
                           />
                         </div>
                       ) : null}
+                      <p className="mt-2">{node.data.comment2}</p>
                     </div>
                   )}
                 </div>
@@ -1418,6 +1476,7 @@ const data1965 = ({ data }) => {
                   />
                   {node.data.orderId % 2 !== 0 ? null : (
                     <div className="flex flex-col items-center p-2">
+                      <p className="mb-2">{node.data.comment1}</p>
                       {node.data.img1 && node.data.img1.url !== 0 ? (
                         <div className="flex">
                           <img
@@ -1467,6 +1526,7 @@ const data1965 = ({ data }) => {
                   />
                   {node.data.orderId % 2 == 0 ? null : (
                     <div className="flex flex-col items-center p-2">
+                      <p className="mb-2">{node.data.comment1}</p>
                       {node.data.img1 && node.data.img1.url !== 0 ? (
                         <div className="flex justify-center">
                           <img
@@ -1494,6 +1554,7 @@ const data1965 = ({ data }) => {
                           />
                         </div>
                       ) : null}
+                      <p className="mt-2">{node.data.comment2}</p>
                     </div>
                   )}
                 </div>
@@ -1512,6 +1573,7 @@ const data1965 = ({ data }) => {
                   />
                   {node.data.orderId % 2 !== 0 ? null : (
                     <div className="flex flex-col items-center p-2">
+                      <p className="mb-2">{node.data.comment1}</p>
                       {node.data.img1 && node.data.img1.url !== 0 ? (
                         <div className="flex">
                           <img

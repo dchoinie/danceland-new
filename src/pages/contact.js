@@ -1,14 +1,29 @@
 import React from "react"
 import Layout from "../components/layout"
+import { FaAngleRight } from "react-icons/fa"
 
 const Contact = () => {
   return (
     <Layout>
       <div className="max-w-screen-xl mx-auto">
         <div className="flex">
-          <div className="flex w-1/2" style={{ border: "1px solid red" }}></div>
-          <div className="flex w-1/2" style={{ border: "1px solid red" }}>
-            <form action="" className="text-xl w-full">
+          <div className="flex flex-col w-1/2">
+            <h2 className="text-5xl">Lorem ipsum dolor sit amet.</h2>
+            <p className="my-4">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Consequuntur, perspiciatis? Blanditiis quia inventore, soluta
+              repellendus fugiat perferendis sapiente quas omnis natus. Ea
+              similique neque aspernatur.
+            </p>
+            <p className="my-4">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Consequuntur, perspiciatis? Blanditiis quia inventore, soluta
+              repellendus fugiat perferendis sapiente quas omnis natus. Ea
+              similique neque aspernatur.
+            </p>
+          </div>
+          <div className="flex w-1/2">
+            <form action="" className="text-xl w-full text-gray-600">
               <div className="flex">
                 <label htmlFor="first" className="hidden">
                   First
@@ -19,6 +34,7 @@ const Contact = () => {
                   id="first"
                   placeholder="First Name"
                   className="border border-gray-400 p-2 rounded mx-2 my-2 w-1/2"
+                  required
                 />
                 <label htmlFor="last" className="hidden">
                   Last
@@ -29,6 +45,7 @@ const Contact = () => {
                   id="last"
                   placeholder="Last Name"
                   className="border border-gray-400 p-2 rounded mx-2 my-2 w-1/2"
+                  required
                 />
               </div>
               <div className="flex">
@@ -41,6 +58,7 @@ const Contact = () => {
                   id="email"
                   placeholder="Email"
                   className="border border-gray-400 p-2 rounded mx-2 my-2 w-1/2"
+                  required
                 />
                 <label htmlFor="phone" className="hidden">
                   Phone
@@ -54,6 +72,20 @@ const Contact = () => {
                 />
               </div>
               <div className="flex">
+                <label
+                  htmlFor="fileUpload"
+                  id="fileUpload"
+                  name="fileUpload"
+                  className="hidden"
+                ></label>
+                <input
+                  type="file"
+                  name="fileUpload"
+                  id="fileUpload"
+                  className="p-2"
+                />
+              </div>
+              <div className="flex">
                 <textarea
                   name="message"
                   id="message"
@@ -61,14 +93,15 @@ const Contact = () => {
                   rows="10"
                   placeholder="Message"
                   className="border border-gray-400 p-2 rounded mx-2 my-2 w-full"
+                  required
                 ></textarea>
               </div>
               <div className="flex">
                 <button
                   type="submit"
-                  className="m-2 p-2 bg-gray-400 border border-gray-600 roundeda"
+                  className="m-2 p-2 bg-gray-400 rounded-md text-gray-800 flex hover:bg-gray-500"
                 >
-                  Submit
+                  Submit <FaAngleRight className="self-center ml-2" />
                 </button>
               </div>
             </form>
