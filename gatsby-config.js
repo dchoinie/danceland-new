@@ -40,6 +40,16 @@ module.exports = {
         path: `${__dirname}/src/fonts/`,
       },
     },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Lato`,
+          },
+        ],
+      },
+    },
     // {
     //   resolve: "gatsby-plugin-web-font-loader",
     //   options: {

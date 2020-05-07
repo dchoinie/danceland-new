@@ -11,7 +11,7 @@ class TimelineDates extends Component {
 
   render() {
     return (
-      <div className="flex flex-col items-center bg-gray-300 text-gray-800 justify-start p-2">
+      <div className="flex flex-col items-center bg-indigo-200 text-gray-800 justify-start p-2">
         <div className="flex w-full">
           {this.props.orderId % 2 == 0 ? (
             <div className="w-1/4"></div>

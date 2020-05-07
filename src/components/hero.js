@@ -17,6 +17,7 @@ export default () => {
         childImageSharp {
           fluid {
             src
+            srcSet
             ...GatsbyImageSharpFluid
           }
         }
@@ -54,15 +55,7 @@ export default () => {
           width: "40%",
         }}
       >
-        <Img
-          className=""
-          fluid={data.front.childImageSharp.fluid}
-          style={{
-            width: "100%",
-            borderRadius: "0.125rem",
-            boxShadow: "1px 2px 5px #333",
-          }}
-        />
+        <Img className="shadow-md" fluid={data.front.childImageSharp.fluid} />
       </div>
     </div>
   )

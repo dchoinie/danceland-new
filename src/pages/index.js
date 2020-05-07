@@ -159,7 +159,7 @@ const IndexPage = ({ data }) => {
     <Layout>
       <SEO title="Home" />
       <div className="flex flex-col max-w-screen-xl mx-auto">
-        <div className="w-full">
+        <div className="w-full shadow-md">
           <BackgroundImage
             fluid={data.hero.childImageSharp.fluid}
             className="w-full"
@@ -169,7 +169,7 @@ const IndexPage = ({ data }) => {
               backgroundSize: "cover",
             }}
           >
-            <div className="absolute flex flex-col items-center border-4 border-white ml-12 mt-12 bg-black text-white px-12 py-6 leading-tight">
+            <div className="absolute flex flex-col items-center border-4 border-white ml-12 mt-12 bg-black text-white px-12 py-6 leading-tight rounded-md">
               <h2 className="text-4xl">The History Of</h2>
               <h1 className="text-8xl">Danceland</h1>
               <h2 className="text-4xl">A Midwest Ballroom</h2>
@@ -214,12 +214,6 @@ const IndexPage = ({ data }) => {
           </div>
           <div className="flex justify-between w-1/2 p-6">
             <div className="flex flex-col w-1/2">
-              <Link to="/1954">
-                <Img
-                  fluid={data.date1954.childImageSharp.fluid}
-                  className="w-full transform hover:scale-105"
-                />
-              </Link>
               <Link to="/1955">
                 <Img
                   fluid={data.date1955.childImageSharp.fluid}
