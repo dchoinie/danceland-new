@@ -49,9 +49,6 @@ export default () => {
             <div className="flex justify-center lg:justify-between">
               <ul className="px-2 lg:px-0">
                 <li>
-                  <Link to="/1954">1954</Link>
-                </li>
-                <li>
                   <Link to="/1955">1955</Link>
                 </li>
                 <li>

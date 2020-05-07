@@ -40,78 +40,83 @@ export default class SearchDropdown extends Component {
         </div>
         <div className="text-center relative z-40">
           {listOpen && (
-            <ul className="text-black bg-white border border-black p-6 rounded absolute w-64 grid grid-cols-2 gap-2 leading-tight">
-              <li>
-                <Link to="/1955" className="hover:underline">
-                  1955
-                </Link>
-              </li>
-              <li>
-                <Link to="/1956" className="hover:underline">
-                  1956
-                </Link>
-              </li>
-              <li>
-                <Link to="/1957" className="hover:underline">
-                  1957
-                </Link>
-              </li>
-              <li>
-                <Link to="/1958" className="hover:underline">
-                  1958
-                </Link>
-              </li>
-              <li>
-                <Link to="/1959" className="hover:underline">
-                  1959
-                </Link>
-              </li>
-              <li>
-                <Link to="/1960" className="hover:underline">
-                  1960
-                </Link>
-              </li>
-              <li>
-                <Link to="/1961" className="hover:underline">
-                  1961
-                </Link>
-              </li>
-              <li>
-                <Link to="/1962" className="hover:underline">
-                  1962
-                </Link>
-              </li>
-              <li>
-                <Link to="/1963" className="hover:underline">
-                  1963
-                </Link>
-              </li>
-              <li>
-                <Link to="/1964" className="hover:underline">
-                  1964
-                </Link>
-              </li>
-              <li>
-                <Link to="/1965" className="hover:underline">
-                  1965
-                </Link>
-              </li>
-              <li>
-                <Link to="/1966" className="hover:underline">
-                  1966
-                </Link>
-              </li>
-              <li>
-                <Link to="/1967" className="hover:underline">
-                  1967
-                </Link>
-              </li>
-              <li>
-                <Link to="/1968" className="hover:underline">
-                  1968
-                </Link>
-              </li>
-            </ul>
+            <div className="flex absolute w-56 justify-around text-black bg-white border border-black p-6 rounded leading-tight">
+              <ul className="">
+                <li>
+                  <Link to="/1955" className="hover:underline">
+                    1955
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/1956" className="hover:underline">
+                    1956
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/1957" className="hover:underline">
+                    1957
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/1958" className="hover:underline">
+                    1958
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/1959" className="hover:underline">
+                    1959
+                  </Link>
+                </li>
+
+                <li>
+                  <Link to="/1960" className="hover:underline">
+                    1960
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/1961" className="hover:underline">
+                    1961
+                  </Link>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <Link to="/1962" className="hover:underline">
+                    1962
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/1963" className="hover:underline">
+                    1963
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/1964" className="hover:underline">
+                    1964
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/1965" className="hover:underline">
+                    1965
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/1966" className="hover:underline">
+                    1966
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/1967" className="hover:underline">
+                    1967
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/1968" className="hover:underline">
+                    1968
+                  </Link>
+                </li>
+              </ul>
+            </div>
           )}
         </div>
       </>
