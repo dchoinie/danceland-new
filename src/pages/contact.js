@@ -7,19 +7,15 @@ const Contact = () => {
     <Layout>
       <div className="max-w-screen-xl mx-auto">
         <div className="flex">
-          <div className="flex flex-col w-1/2">
-            <h2 className="text-5xl">Lorem ipsum dolor sit amet.</h2>
-            <p className="my-4">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Consequuntur, perspiciatis? Blanditiis quia inventore, soluta
-              repellendus fugiat perferendis sapiente quas omnis natus. Ea
-              similique neque aspernatur.
+          <div className="flex flex-col w-1/2 px-6">
+            <h2 className="text-5xl">Contact</h2>
+            <p className="my-4 text-lg">
+              Thanks for visiting the Danceland website. My mission is to
+              accurately document the history of this legendary venue.
             </p>
-            <p className="my-4">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Consequuntur, perspiciatis? Blanditiis quia inventore, soluta
-              repellendus fugiat perferendis sapiente quas omnis natus. Ea
-              similique neque aspernatur.
+            <p className="mt-4 text-lg">
+              Any additions, corrections or comments are welcome. Feel free to
+              contact us.
             </p>
           </div>
           <div className="flex w-1/2">

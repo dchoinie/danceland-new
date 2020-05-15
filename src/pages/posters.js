@@ -481,7 +481,7 @@ export default ({ data }) => {
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-1 lg:gap-2 px-6 lg:px-0 z-0">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-1 lg:gap-16 px-6 lg:px-0 z-0">
           <div className="w-full">
             <ModalImage
               small={data.poster1.childImageSharp.fluid.src}

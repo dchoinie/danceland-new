@@ -211,6 +211,10 @@ const IndexPage = ({ data }) => {
               misses – the memories.
             </p>
             <p className="my-4">Check it out!</p>
+            <p className="mt-4">
+              Special Thanks to Ann Duggan, Dennis Hertle, Tim Canfield, Dan
+              Choiniere, Tate Preston, Kathy Wall
+            </p>
           </div>
           <div className="flex justify-between w-1/2 p-6">
             <div className="flex flex-col w-1/2">
